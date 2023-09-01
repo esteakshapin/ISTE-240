@@ -9,20 +9,26 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <style>
-        body{
+        html, body{
             margin: 0px;
             padding: 0px;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
         }
         .picDescripContainer{
             display: flex;
             margin: 2rem;
             gap: 3rem;
-            background-color: aqua;
+            flex: 0 1 auto;
         }
 
         .picDescripContainer img{
             max-height: 300px;
-            border-radius: 50%;
+            border-radius: 25px;
             border: 2px solid black;
             /* box shadow code borrowed from W3School (https://www.w3schools.com/css/css3_shadows_box.asp) */
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
@@ -42,8 +48,26 @@
             margin-top: 0;
         }
 
-        .assignmentsContainer{
-            
+        .assignmentsContianer{
+            margin: 2rem;
+            margin-top: 0px;
+
+            border-radius: 25px;
+            border: 2px solid black;
+            /* box shadow code borrowed from W3School (https://www.w3schools.com/css/css3_shadows_box.asp) */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            padding: 1rem;
+
+            flex: 1 1 auto;
+        }
+
+        .assignmentsContianer h2{
+            margin-top: 0px;
+        }
+
+        .filterOptionsContainer{
+            display: flex;
         }
     </style>
   </head>
@@ -59,6 +83,18 @@
         <!-- This contianer will hold the assignment flexbox -->
         <div class="assignmentsContianer">
             <h2>Assignments</h2>
+            <div class="filterOptionsContianer">
+                <h4>Filter</h4>
+                <div class="filterOptions">
+                    Exercise
+                </div>
+                <div class="filterOptions">
+                    Exercise
+                </div>
+                <div class="filterOptions">
+                    Exercise
+                </div>
+            </div>
         </div>
   </body>
 </html>
