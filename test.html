@@ -1,0 +1,64 @@
+<!-- The basic starter template for this website was taken from https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/. This includes the head and body structure and the basic header tags --> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ISTE 240 - Esteak Shapin</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .picDescripContainer{
+            display: flex;
+            margin: 2rem;
+            gap: 3rem;
+            background-color: aqua;
+        }
+
+        .picDescripContainer img{
+            max-height: 300px;
+            border-radius: 50%;
+            border: 2px solid black;
+            /* box shadow code borrowed from W3School (https://www.w3schools.com/css/css3_shadows_box.asp) */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+        }
+
+        .description{
+            width: 100%;
+            padding: 1rem;
+            border-radius: 25px;
+            border: 2px solid black;
+            /* box shadow code borrowed from W3School (https://www.w3schools.com/css/css3_shadows_box.asp) */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+            
+        }
+
+        .description h1{
+            margin-top: 0;
+        }
+
+        .assignmentsContainer{
+            
+        }
+    </style>
+  </head>
+  <body>
+        <!-- This container is responsive and holds the top two items, the profile picture and the description. -->
+        <div class="picDescripContainer">
+            <img src="https://media.licdn.com/dms/image/C4D03AQEOjqt2-r8ggw/profile-displayphoto-shrink_800_800/0/1594522969282?e=1698883200&v=beta&t=qDUk3fU39zbbiCd63axYNmvN1bHJgYwXiXrof0j1bug" alt="Shapin's Profile Pic" class="profilePic">
+            <div class="description">
+                <h1>Esteak Shapin</h1>
+            </div>
+        </div>
+
+        <!-- This contianer will hold the assignment flexbox -->
+        <div class="assignmentsContianer">
+            <h2>Assignments</h2>
+        </div>
+  </body>
+</html>
