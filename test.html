@@ -20,7 +20,6 @@
         }
         .picDescripContainer{
             display: flex;
-            flex-wrap: wrap;
             margin: 2rem;
             gap: 2rem;
         }
@@ -34,7 +33,6 @@
         }
 
         .description{
-            /* width: 100%; */
             flex-grow: 1;
             padding: 1rem;
             border-radius: 25px;
@@ -50,6 +48,9 @@
                 flex-grow: 1;
                 max-width: 100%;
                 max-height: max-content;
+            }
+            .picDescripContainer{
+                flex-wrap: wrap;
             }
         }
 
@@ -119,6 +120,7 @@
             padding: 2rem;
             flex-wrap: wrap;
             gap: 2rem;
+            justify-content: center;
         }
 
         /* The card design and css was borrowed from w3schools (https://www.w3schools.com/howto/howto_css_cards.asp) */
@@ -151,6 +153,31 @@
             padding: .2rem;
             border-radius: 4px;
         }
+
+        .descriptionHeader a{
+            display: inline-block;
+            padding: .5rem;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Using a different method (background gradient) to achieve the hover feature. Inspiration for this idea was from stackoverflow (https://stackoverflow.com/questions/59537015/html-css-adding-a-black-overlay-to-my-div) */
+        .description a:hover{
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.3), 
+                rgba(0, 0, 0, 0.3)
+            );
+        }
+
+        #linkedInLink{
+            background-color: #0077B5;
+        }
+
+        #emailLink{
+            background-color: #F76902;
+        }
         
     </style>
   </head>
@@ -159,7 +186,14 @@
         <div class="picDescripContainer">
             <img src="https://media.licdn.com/dms/image/C4D03AQEOjqt2-r8ggw/profile-displayphoto-shrink_800_800/0/1594522969282?e=1698883200&v=beta&t=qDUk3fU39zbbiCd63axYNmvN1bHJgYwXiXrof0j1bug" alt="Shapin's Profile Pic" class="profilePic">
             <div class="description">
-                <h1>Esteak Shapin</h1>
+                <div class="descriptionHeader">
+                    <h1>Esteak Shapin</h1>
+                    <a href="" id="linkedInLink">LinkedIn</a>
+                    <a href="" id="emailLink">eks3146@rit.edu</a>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
             </div>
         </div>
 
