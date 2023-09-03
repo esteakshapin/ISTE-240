@@ -7,199 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ISTE 240 - Esteak Shapin</title>
     <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="./static/css/index.css">
 
     <!-- custom poppins font from google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <style>
-        html, body{
-            margin: 0px;
-            padding: 0px;
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            font-family: 'Open Sans', sans-serif;
-            font-family: 'Poppins', sans-serif;
-        }
-        .picDescripContainer{
-            display: flex;
-            margin: 2rem;
-            gap: 2rem;
-        }
-
-        .picDescripContainer img{
-            max-height: 300px;
-            border-radius: 25px;
-            border: 2px solid black;
-            /* box shadow code borrowed from W3School (https://www.w3schools.com/css/css3_shadows_box.asp) */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
-        }
-
-        .description{
-            flex-grow: 1;
-            padding: 1rem;
-            border-radius: 25px;
-            border: 2px solid black;
-            /* box shadow code borrowed from W3School (https://www.w3schools.com/css/css3_shadows_box.asp) */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
-            
-        }
-
-        /* make the description box wrap under the image on smaller screen. achieved this by setting the image's flex frow to be the same as the description box and the width to be 100%. also changed the height from fixed to responsive to maintian proper image ratio. */
-        @media (max-width: 700px) {
-            .picDescripContainer img{
-                flex-grow: 1;
-                max-width: 100%;
-                max-height: max-content;
-            }
-            .picDescripContainer{
-                flex-wrap: wrap;
-            }
-        }
-
-        .description h1{
-            margin-top: 0;
-        }
-
-        .assignmentsContianer{
-            width: calc(100% - 6rem);
-            margin: 2rem;
-            margin-top: 0px;
-
-            border-radius: 25px;
-            border: 2px solid black;
-            /* box shadow code borrowed from W3School (https://www.w3schools.com/css/css3_shadows_box.asp) */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-            padding: 1rem;
-
-            flex: 1 1 auto;
-        }
-
-        .assignmentsContianer h2, h4, h3{
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        .filterOptionsContainer{
-            display: flex;
-            /* background-color: aquamarine; */
-            justify-content: flex-end;
-            align-items: center;
-            gap: 1rem;
-        }
-        .filterOptions{
-            padding: .5rem;
-            border-radius: 4px;
-            font-size: small;
-            border: 1px solid black;
-            cursor: pointer; 
-        }
-
-        /* setting the color codes for each filter option. will allow users to differntiate between each option. The color pallette was borrowed from https://www.schemecolor.com/light-gradient.php */
-        .exercises.active{
-            background-color: rgb(251, 231, 218);
-        }
-        .exercises:hover{
-            background-color: rgb(241, 221, 208); /* The hover RGB is 10 points less than the active value. This makes the color darker and visible when hovering while maintaining the same hue */
-        }
-
-        .individualProjects.active{
-            background-color: rgb(244, 253, 228);
-        }
-        .individualProjects:hover{
-            background-color: rgb(234, 243, 218);
-        }
-
-        .groupProjects.active{
-            background-color: rgb(245, 214, 229);
-        }
-        .groupProjects:hover{
-            background-color: rgb(235, 204, 219);
-        }
-
-        .assignmentCardContainer{
-            display: flex;
-            padding: 2rem;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        /* The card design and css was borrowed from w3schools (https://www.w3schools.com/howto/howto_css_cards.asp) */
-        .card {
-            /* Add shadows to create the "card" effect */
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-            max-width: 300px;
-            padding: 1rem;
-        }
-
-        /* On mouse-over, add a deeper shadow */
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-
-        /* end of code borrowed from w3schools */
-
-        .card{
-            border-radius: 10px;
-        }
-
-        .card span{
-            display: inline-block;
-            font-size: small;
-            font-weight: lighter;
-            padding: .2rem;
-            border-radius: 4px;
-        }
-
-        .descriptionHeader a{
-            display: inline-block;
-            padding: .5rem;
-            border-radius: 10px;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        /* Using a different method (background gradient) to achieve the hover feature. Inspiration for this idea was from stackoverflow (https://stackoverflow.com/questions/59537015/html-css-adding-a-black-overlay-to-my-div) */
-        .description a:hover{
-            background: linear-gradient(
-                rgba(0, 0, 0, 0.3), 
-                rgba(0, 0, 0, 0.3)
-            );
-        }
-
-        #linkedInLink{
-            background-color: #0077B5;
-        }
-
-        #emailLink{
-            background-color: #F76902;
-        }
-
-        #github{
-            color: #24292e;
-            background-color: #fafbfc;
-            border: 1px solid #2b3137;
-            padding: calc(.5rem - 1px); /* subtracting one px to maintian uniform size between all link buttons */
-        }
-
-        .hide{
-            display: none;
-        }
-        
-    </style>
   </head>
   <body>
         <!-- This container is responsive and holds the top two items, the profile picture and the description. -->
         <div class="picDescripContainer">
-            <img src="./static/ISTE-240-pfp.jpg" alt="Shapin's Profile Pic" class="profilePic">
+            <img src="./static/images/ISTE-240-pfp.jpg" alt="Shapin's Profile Pic" class="profilePic">
             <div class="description">
                 <div class="descriptionHeader">
                     <h1>Esteak Shapin</h1>
@@ -210,9 +28,9 @@
                 <p>
                     Hey everyone! I'm Shapin, and I'm a transfer student at RIT, coming all the way from NYC. This is my first semester here, and I'm studying Web & Mobile Computing.
                     <br><br>
-                    Originally, I'm from Bangladesh, but I grew up in Brooklyn, so that's home to me. I've been into coding since I was pretty young, and I dream of running my own startup someday.
+                    Originally, I'm from Bangladesh, but I grew up in Brooklyn for the majority of my time. I've been intrested in coding since I was pretty young, and I dream of running my own startup someday.
                     <br><br>
-                    Besides coding, I'm a sports enthusiast, especially when it comes to football. I used to play for my high school team, and I'm excited to join the RIT football club.
+                    Besides coding, I love sports - especially when it comes to football. I used to play for my high school team, and I'm excited to join the RIT football club.
                     <br><br>
                     Nature is another love of mine, and I enjoy hiking, often with my brother. It's a great way to unwind and connect with the outdoors.
                     <br><br>
@@ -234,21 +52,22 @@
             </div>
 
             <div class="assignmentCardContainer">
+                <!-- the card list is currently a placeholder and is desgined to add additional cards as assignments and projects are being completed. The current placeholder links back to the current page -->
                 <div class="card">
-                    <h3><b>Exercise 1</b></h3> 
+                    <h3><b><a href="/">Exercise 1</a></b></h3> 
                     <span class="exercises active">Exercises</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
                 </div>
 
                 <div class="card">
-                    <h3><b>Exercise 2</b></h3> 
+                    <h3><b><a href="/">Exercise 2</a></b></h3> 
                     <span class="exercises active">Exercises</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
                 </div>
 
                 <div class="card">
                     <div class="container">
-                      <h3><b>Individual Project 1</b></h3> 
+                      <h3><b><a href="/">Individual Project 1</a></b></h3> 
                       <span class="individualProjects active">Individual Projects</span>
 
                       <p>Architect & Engineer adasd asd as das dasas da sd</p> 
@@ -257,7 +76,7 @@
 
                 <div class="card">
                     <div class="container">
-                      <h3><b>Group Project</b></h3> 
+                      <h3><b><a href="/">Group Project</a></b></h3> 
                       <span class="groupProjects active">Group Projects</span>
 
                       <p>Architect & Engineer adasd asd as das dasas da sd</p> 
@@ -267,53 +86,6 @@
 
         </div>
 
-        <script>
-            function toggle(element) {
-                // This function toggles the state of the filterOptions, adding and removing the active classlist to visually indicate the option has been selected
-                if(element.classList.contains('active')){
-                    element.classList.remove('active')
-                }else{
-                    element.classList.add('active')
-                }
-
-                // keeping track of how many filters are active
-                var numberOfActiveFilters = 0
-
-                // This bit of code is responsible for displaying the filtered cards
-                filterOptions = document.getElementsByClassName("filterOptions"); //first, get all the filter options
-        
-                for(var i = 0; i < filterOptions.length; i++){
-
-                    // we must select the cards that has the same tag as the selected filter. We can grab the parent using the :has selector.
-                    // we can also grab the specific filter as the second class will always be the type of filter (like exercises or individual project)
-                    cardElements = document.querySelectorAll('.card:has(.' + filterOptions[i].classList[1] + ')')
-
-                    // loop thru all the filter options to see which one is active
-                    if(filterOptions[i].classList.contains("active")){
-                        //loop through all the cards of the same type and removing the hide class so the filtered type shows up
-                        [...cardElements].forEach((e)=> e.classList.remove('hide'))
-                        
-                        //updating number of active filters
-                        numberOfActiveFilters += 1
-                    }else{
-                        // the current filter type is not warented so must hide
-                        [...cardElements].forEach((e)=> e.classList.add('hide'))
-                    }
-                }
-
-                // none of the filters are active. must show all cards (basically a reset). This can be improved upon as we are looping through this list twice and potentially hiding and then showing the elements, making it very inefficent.
-                if (numberOfActiveFilters == 0 ){
-                    for(var i = 0; i < filterOptions.length; i++){
-
-                        // we must select the card that has the same tag as the selected filter. We can grab the parent using the :has selector.
-                        // we can also grab the specific filter as the second class will always be the type of filter (like exercises or individual project)
-                        cardElements = document.querySelectorAll('.card:has(.' + filterOptions[i].classList[1] + ')');
-
-                        //removing the hide class so the filtered type shows up
-                        [...cardElements].forEach((e)=> e.classList.remove('hide'))
-                    }                  
-                }
-            }
-        </script>
+        <script src="./static/js/index.js"></script>
   </body>
 </html>
