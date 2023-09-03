@@ -94,24 +94,24 @@
         }
 
         /* setting the color codes for each filter option. will allow users to differntiate between each option. The color pallette was borrowed from https://www.schemecolor.com/light-gradient.php */
-        #exercises.active{
+        .exercises.active{
             background-color: rgb(251, 231, 218);
         }
-        #exercises:hover{
+        .exercises:hover{
             background-color: rgb(241, 221, 208); /* The hover RGB is 10 points less than the active value. This makes the color darker and visible when hovering while maintaining the same hue */
         }
 
-        #individualProjects.active{
+        .individualProjects.active{
             background-color: rgb(244, 253, 228);
         }
-        #individualProjects:hover{
+        .individualProjects:hover{
             background-color: rgb(234, 243, 218);
         }
 
-        #groupProjects.active{
+        .groupProjects.active{
             background-color: rgb(245, 214, 229);
         }
-        #groupProjects:hover{
+        .groupProjects:hover{
             background-color: rgb(235, 204, 219);
         }
 
@@ -128,6 +128,8 @@
             /* Add shadows to create the "card" effect */
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
+            max-width: 300px;
+            padding: 1rem;
         }
 
         /* On mouse-over, add a deeper shadow */
@@ -135,10 +137,6 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
 
-        /* Add some padding inside the card container */
-        .container {
-            padding: 1rem;
-        }
         /* end of code borrowed from w3schools */
 
         .card{
@@ -149,7 +147,6 @@
             display: inline-block;
             font-size: small;
             font-weight: lighter;
-            background-color: rgb(241, 221, 208);
             padding: .2rem;
             border-radius: 4px;
         }
@@ -178,21 +175,41 @@
         #emailLink{
             background-color: #F76902;
         }
+
+        #github{
+            color: #24292e;
+            background-color: #fafbfc;
+            border: 1px solid #2b3137;
+            padding: calc(.5rem - 1px); /* subtracting one px to maintian uniform size between all link buttons */
+        }
+
+        .hide{
+            display: none;
+        }
         
     </style>
   </head>
   <body>
         <!-- This container is responsive and holds the top two items, the profile picture and the description. -->
         <div class="picDescripContainer">
-            <img src="https://media.licdn.com/dms/image/C4D03AQEOjqt2-r8ggw/profile-displayphoto-shrink_800_800/0/1594522969282?e=1698883200&v=beta&t=qDUk3fU39zbbiCd63axYNmvN1bHJgYwXiXrof0j1bug" alt="Shapin's Profile Pic" class="profilePic">
+            <img src="./static/ISTE-240-pfp.jpg" alt="Shapin's Profile Pic" class="profilePic">
             <div class="description">
                 <div class="descriptionHeader">
                     <h1>Esteak Shapin</h1>
                     <a href="" id="linkedInLink">LinkedIn</a>
+                    <a href="" id="github">GitHub</a>
                     <a href="" id="emailLink">eks3146@rit.edu</a>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Hey everyone! I'm Shapin, and I'm a transfer student at RIT, coming all the way from NYC. This is my first semester here, and I'm studying Web & Mobile Computing.
+                    <br><br>
+                    Originally, I'm from Bangladesh, but I grew up in Brooklyn, so that's home to me. I've been into coding since I was pretty young, and I dream of running my own startup someday.
+                    <br><br>
+                    Besides coding, I'm a sports enthusiast, especially when it comes to football. I used to play for my high school team, and I'm excited to join the RIT football club.
+                    <br><br>
+                    Nature is another love of mine, and I enjoy hiking, often with my brother. It's a great way to unwind and connect with the outdoors.
+                    <br><br>
+                    I'm looking forward to making new friends and having a fantastic time here at RIT!
                 </p>
             </div>
         </div>
@@ -204,16 +221,25 @@
             <!-- This container is a flex div that hold all the filter options. It is justified at the end -->
             <div class="filterOptionsContainer">
                 <h4>Filter</h4>
-                <span class="filterOptions" id="exercises" onclick="toggle(this)">Exercises</span>
-                <span class="filterOptions" id="individualProjects" onclick="toggle(this)">Individual Projects</span>
-                <span class="filterOptions" id="groupProjects" onclick="toggle(this)">Group Projects</span>
+                <span class="filterOptions exercises" onclick="toggle(this)">Exercises</span>
+                <span class="filterOptions individualProjects" onclick="toggle(this)">Individual Projects</span>
+                <span class="filterOptions groupProjects" onclick="toggle(this)">Group Projects</span>
             </div>
 
             <div class="assignmentCardContainer">
                 <div class="card">
-                    <div class="container">
+                    
                       <h3><b>Exercise 1</b></h3> 
-                      <span>Exercises</span>
+                      <span class="exercises active">Exercises</span>
+
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+
+                </div>
+
+                <div class="card">
+                    <div class="container">
+                      <h3><b>Individual Project 1</b></h3> 
+                      <span class="individualProjects active">Individual Projects</span>
 
                       <p>Architect & Engineer adasd asd as das dasas da sd</p> 
                     </div>
@@ -221,17 +247,8 @@
 
                 <div class="card">
                     <div class="container">
-                      <h3><b>Exercise 1</b></h3> 
-                      <span>Exercises</span>
-
-                      <p>Architect & Engineer adasd asd as das dasas da sd</p> 
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="container">
-                      <h3><b>Exercise 1</b></h3> 
-                      <span>Exercises</span>
+                      <h3><b>Group Project</b></h3> 
+                      <span class="groupProjects active">Group Projects</span>
 
                       <p>Architect & Engineer adasd asd as das dasas da sd</p> 
                     </div>
@@ -247,6 +264,44 @@
                     element.classList.remove('active')
                 }else{
                     element.classList.add('active')
+                }
+
+                // keeping track of how many filters are active
+                var numberOfActiveFilters = 0
+
+                // This bit of code is responsible for displaying the filtered cards
+                filterOptions = document.getElementsByClassName("filterOptions"); //first, get all the filter options
+        
+                for(var i = 0; i < filterOptions.length; i++){
+
+                    // we must select the card that has the same tag as the selected filter. We can grab the parent using the :has selector.
+                    // we can also grab the specific filter as the second class will always be the type of filter (like exercises or individual project)
+                    cardElement = document.querySelector('.card:has(.' + filterOptions[i].classList[1] + ')')
+
+                    // loop thru all the filter options to see which one is active
+                    if(filterOptions[i].classList.contains("active")){
+                        //removing the hide class so the filtered type shows up
+                        cardElement.classList.remove('hide')
+
+                        //updating number of active filters
+                        numberOfActiveFilters += 1
+                    }else{
+                        // the current filter type is not warented so must hide
+                        cardElement.classList.add('hide')
+                    }
+                }
+
+                // none of the filters are active. must show all cards (basically a reset). This can be improved upon as we are looping through this list twice and potentially hiding and then showing the elements, making it very inefficent.
+                if (numberOfActiveFilters == 0 ){
+                    for(var i = 0; i < filterOptions.length; i++){
+
+                        // we must select the card that has the same tag as the selected filter. We can grab the parent using the :has selector.
+                        // we can also grab the specific filter as the second class will always be the type of filter (like exercises or individual project)
+                        cardElement = document.querySelector('.card:has(.' + filterOptions[i].classList[1] + ')')
+
+                        //removing the hide class so the filtered type shows up
+                        cardElement.classList.remove('hide')
+                    }                  
                 }
             }
         </script>
