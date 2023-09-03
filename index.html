@@ -228,12 +228,15 @@
 
             <div class="assignmentCardContainer">
                 <div class="card">
-                    
-                      <h3><b>Exercise 1</b></h3> 
-                      <span class="exercises active">Exercises</span>
+                    <h3><b>Exercise 1</b></h3> 
+                    <span class="exercises active">Exercises</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                </div>
 
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-
+                <div class="card">
+                    <h3><b>Exercise 2</b></h3> 
+                    <span class="exercises active">Exercises</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
                 </div>
 
                 <div class="card">
@@ -274,20 +277,20 @@
         
                 for(var i = 0; i < filterOptions.length; i++){
 
-                    // we must select the card that has the same tag as the selected filter. We can grab the parent using the :has selector.
+                    // we must select the cards that has the same tag as the selected filter. We can grab the parent using the :has selector.
                     // we can also grab the specific filter as the second class will always be the type of filter (like exercises or individual project)
-                    cardElement = document.querySelector('.card:has(.' + filterOptions[i].classList[1] + ')')
+                    cardElements = document.querySelectorAll('.card:has(.' + filterOptions[i].classList[1] + ')')
 
                     // loop thru all the filter options to see which one is active
                     if(filterOptions[i].classList.contains("active")){
-                        //removing the hide class so the filtered type shows up
-                        cardElement.classList.remove('hide')
-
+                        //loop through all the cards of the same type and removing the hide class so the filtered type shows up
+                        [...cardElements].forEach((e)=> e.classList.remove('hide'))
+                        
                         //updating number of active filters
                         numberOfActiveFilters += 1
                     }else{
                         // the current filter type is not warented so must hide
-                        cardElement.classList.add('hide')
+                        [...cardElements].forEach((e)=> e.classList.add('hide'))
                     }
                 }
 
@@ -297,10 +300,10 @@
 
                         // we must select the card that has the same tag as the selected filter. We can grab the parent using the :has selector.
                         // we can also grab the specific filter as the second class will always be the type of filter (like exercises or individual project)
-                        cardElement = document.querySelector('.card:has(.' + filterOptions[i].classList[1] + ')')
+                        cardElements = document.querySelectorAll('.card:has(.' + filterOptions[i].classList[1] + ')');
 
                         //removing the hide class so the filtered type shows up
-                        cardElement.classList.remove('hide')
+                        [...cardElements].forEach((e)=> e.classList.remove('hide'))
                     }                  
                 }
             }
