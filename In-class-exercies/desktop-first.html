@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+        .col{
+            border: solid 2px blue;
+            padding: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            body{
+                color: red;
+            }
+            .wrapper{
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            body{
+                color: blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="col">Col 1</div>
+        <div class="col">Col 2</div>
+        <div class="col">Col 3</div>
+    </div>
+</body>
+</html>
