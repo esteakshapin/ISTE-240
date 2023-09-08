@@ -1,0 +1,86 @@
+/* Getting rid of defualt margin and paddign that comes with body */
+html, body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url("./../images/side.jpeg");
+    background-repeat: repeat-y;
+}
+
+.navBar{
+    /* the navbar is displayed as flex so it grows and shrinks with the screen */
+    display: flex; 
+    flex-wrap: nowrap;
+    background-color: lightblue;
+    border-bottom: 2px solid black;
+
+    /* the sapce around keeps the items centered and gives equal space between eachother */
+    justify-content: space-around;
+}
+
+.container{
+    /* the flowerbox container, set up as a 2x2 grid */
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    margin-left: 150px;
+}
+
+.flowerContainer{
+    background-color: darkgreen;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 30px;
+    margin: 1rem 1rem;
+    /* position set as relative so the child elements (astrik and flower name) can be positioned relative to the box */
+    position: relative;
+    color: lightpink;
+    transition: background-color 1s ease;
+}
+
+.flowerContainer:hover{
+    background-color: purple;
+    cursor: pointer;
+}
+
+/* the flower name and astrik are positioned and styled */
+.flowerContainer p{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    top: 98px;
+    left: 62px
+}
+
+.flowerContainer span{
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: 4px 4px yellow;
+    display: inline;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+
+/* with screen size smaller than 600px, the grid is changed from 2x2 to 1x4 */
+@media (max-width: 600px){
+    .container{
+        grid-template-columns: auto;
+
+    }
+}
+
+/* with screen size smaller than 500px, the side bar is hidden */
+@media (max-width: 500px) {
+    html, body{
+        background-image: none;
+    }
+
+    /* the margin of the flower box container is removed to make it positioned all the way on the left */
+    .container{
+        margin-left: 0;
+    }
+}
