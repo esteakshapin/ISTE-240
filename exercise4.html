@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./static/css/exercise4.css">
+        <title>Exercise 4</title>
+    </head>
+    <body>
+        <!-- navbar/menu for the site -->
+        <nav>
+            <img src="./static/images/Small_town_icon.png" alt="Small Town Logo"
+                id="NavIcon">
+            <ul class="navLinkContainer">
+                <li><a href="">Home</a></li>
+                <li><a href="">Activities</a></li>
+                <li><a href="">Food</a></li>
+                <li><a href="">Rest</a></li>
+                <li><a href="">People</a></li>
+                <li><a href="">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <!-- the center tag allows me to center the body contents (the form) -->
+        <center>
+            <div class="contentContainer">
+                <h1>Please tell us about your visit:</h1>
+                <hr>
+
+                <!-- the brs were used for spacing purposes -->
+                <br><br>
+
+                <!-- form containing the various inputs -->
+                <form>
+                    <label for="group">How many in your group?</label>
+                    <input type="number" name="group" id="groupInp">
+                    <br><br>
+                    <label for="visitDate">When did you visit?</label>
+                    <input type="date" name="visitDate">
+                    <br><br>
+
+                    <!-- the fieldset containing the radio buttons for the favorite place -->
+                    <fieldset>
+                        <legend>Favorite Place:</legend>
+
+                        <div>
+                            <input type="radio" id="baseballField"
+                                name="favoritePlace" value="baseballField"
+                                checked />
+                            <label for="baseballField">Baseball Field</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="museum" name="favoritePlace"
+                                value="museum" />
+                            <label for="museum">museum</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="restaurant"
+                                name="favoritePlace" value="restaurant" />
+                            <label for="restaurant">Luigis Italian Restaurant</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="hotel" name="favoritePlace"
+                                value="hotel" />
+                            <label for="hotel">Mom's Hotel</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="hostel" name="favoritePlace"
+                                value="hostel" />
+                            <label for="hostel">The Youth Hostel</label>
+                        </div>
+                    </fieldset>
+
+                    <br><br>
+
+                    <!-- Range input for rating visit -->
+                    <!-- Span was added a label/title for the range was required to be placed above and not flanking it on its either side -->
+                    <span>Overall rate your visit to our small town:</span>
+                    <br>
+                    <label for="rate">0</label>
+                    <input type="range" name="rate" id="rate" min="0" max="10" value="5">
+                    <label for="rate">10</label>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </center>
+    </body>
+</html>
