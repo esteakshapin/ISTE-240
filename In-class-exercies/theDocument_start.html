@@ -44,22 +44,31 @@ button {
 	}
 	function number06(){
 		//append, at the end of the document, the text " ISTE 240 "
-
+		var text = document.createTextNode("ISTE 240");
+		document.body.appendChild(text);
 	}
    function number07(){
       //create an <li> node
+		lielement = document.createElement("li")		
       
       //create an <a> node
-      
+      anchorElement = document.createElement("a")
+
       //create a text node holding "Purdue University"
-      
+      textNode = document.createTextNode("Purdue University")
+
       //put the text node inside of the <a> tag
-      
+      anchorElement.appendChild(textNode)
+
       //give the <a> tag the href attribute and set it to "https://www.purdue.edu/"
-      
+      anchorElement.setAttribute("href", "https://www.purdue.edu/")
+
       //put the <a> tag inside of the <li>
-      
+      lielement.appendChild(anchorElement)
+
       //put the <li> in the <ol> so it shows up first!
+		document.getElementById("myList").insertBefore(lielement, document.getElementById("myList").firstChild )
+
 
 	}
 </script>
