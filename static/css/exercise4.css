@@ -1,0 +1,60 @@
+/* resetting default padding and margins and setting background color  */
+body{
+    padding: 0;
+    margin: 0;
+    background-color: lightgray;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* adding horizontal margin so the HR expands beyond the width of the title  */
+h1{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* setting default widht and height for logo */
+#NavIcon{
+    width: 96px;
+    height: 96px;
+}
+
+/* Remove list style and added border to make navcontainer look like design */
+.navLinkContainer{
+    list-style: none;
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px 0px;
+}
+
+/* NOTE: inline to make elements next to each other with padding to seperate eachother */
+.navLinkContainer li{
+    display: inline;
+    padding: 0px 1rem;
+    border-right: 1px solid black;
+}
+
+/* The last nav item doesnt need a border as the container already has a border to its right */
+.navLinkContainer li:last-child {
+    border-right: 0px;
+}
+
+.contentContainer{
+    display: inline-block;
+}
+
+fieldset{
+    text-align: left;
+    display: inline-block;
+}
+
+/* removing stryling from nav links per design */
+nav a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
