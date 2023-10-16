@@ -13,6 +13,17 @@ body {margin-left:100px;}
 		//when you get a value out of an input, you are getting a string.  To get a number, use parseInt()
 		//When you want to output something into the HTML you can use .innerHTML - like document.getElementById("result").innerHTML= "fred";
 
+	function multiply(){
+		let x = parseInt(document.getElementById("firstoperand").value)
+		let y = parseInt(document.getElementById("secondoperand").value)
+		document.getElementById("result").innerHTML = "The answer: " + (x * y)
+	}
+
+	function divide(){
+		let x = parseInt(document.getElementById("firstoperand").value)
+		let y = parseInt(document.getElementById("secondoperand").value)
+		document.getElementById("result").innerHTML = (x / y)
+	}
 
 </script>
 
@@ -22,7 +33,7 @@ body {margin-left:100px;}
 		<h2>JavaScript Exercise 5d </h2> 
 	</div>
 	<form>
-		<input type="text" id="firstoperand" placeholder=First Operand"/><br>
+		<input type="text" id="firstoperand" placeholder="First Operand"/><br>
 		<input type="text" id="secondoperand" placeholder="Second Operand"/><br>
 		<input type="button" onclick="divide()" value="Divide" />
 		<input type="button" onclick="multiply()" value="Multiply" />
