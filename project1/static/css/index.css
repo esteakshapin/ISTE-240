@@ -245,3 +245,17 @@ nav #about-me{
     max-height: 300px;
     object-fit: cover;
 }
+
+.recipe-sections{
+    margin-left: 1rem; 
+    margin-top: 1rem;
+}
+
+.recipe-sections ol{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.recipe-sections h4{
+    font-style: italic;
+}
