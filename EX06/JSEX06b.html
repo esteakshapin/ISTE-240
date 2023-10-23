@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- ISTE240 Exercise 5b -->
+<meta charset=utf-8 />
+<title>Get elements from a form</title>
+<script>
+	function howmany() {
+		console.log("Total number of input elements:", document.getElementsByTagName("input").length)
+
+		console.log("Total number of input elements with type text:", document.querySelectorAll("input[type='text']").length)
+	}
+</script>
+</head>
+<body>
+	<!-- Exercise 6b -->
+
+	<div>
+
+		<p class="exerTitle">JavaScript Exercise 5b </p>
+
+		<form id="regForm">
+
+			<input type="text" id="fname" placeholder = "boo"><br>
+
+			<input type="text" id="lname" placeholder = "Radley"><br>
+
+			<input type="checkbox" id="dog">I have a dog. (Check if you do)<br>
+
+			<input type="text" id="major"  placeholder = "major"><br>       
+
+			<input type="button" onclick="howmany();" value="Count of inputs">
+
+		</form>
+
+	</div>
+
+	<hr>
+</body>
+</html>
