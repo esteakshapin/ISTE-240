@@ -16,13 +16,27 @@ body {margin-left:100px;}
 	function multiply(){
 		let x = parseInt(document.getElementById("firstoperand").value)
 		let y = parseInt(document.getElementById("secondoperand").value)
-		document.getElementById("result").innerHTML = "The answer: " + (x * y)
+		// remove any text node tht may be present already
+		// NOTE: Try and Catch is needed because if there is no text, then an error will be thrown
+		try {
+			document.getElementById("result").removeChild(document.getElementById("result").firstChild)
+		} catch (error) {
+		}
+		
+		document.getElementById("result").appendChild(document.createTextNode( (x * y)));
 	}
 
 	function divide(){
 		let x = parseInt(document.getElementById("firstoperand").value)
 		let y = parseInt(document.getElementById("secondoperand").value)
-		document.getElementById("result").innerHTML = (x / y)
+		
+		//remove any text node tht may be present already
+		// NOTE: Try and Catch is needed because if there is no text, then an error will be thrown
+		try {
+			document.getElementById("result").removeChild(document.getElementById("result").firstChild)
+		} catch (error) {
+		}
+		document.getElementById("result").appendChild(document.createTextNode(x / y))
 	}
 
 </script>
@@ -30,7 +44,7 @@ body {margin-left:100px;}
 </head>
 <body>
 	<div>
-		<h2>JavaScript Exercise 5d </h2> 
+		<h2>JavaScript Exercise 6d </h2> 
 	</div>
 	<form>
 		<input type="text" id="firstoperand" placeholder="First Operand"/><br>
