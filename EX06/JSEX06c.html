@@ -9,20 +9,24 @@ function getOptions() {
 	// function to display the number of options in an alert()
 	alert("# of options = " + document.getElementById("mySelect").length)
 }
+
+function colorchanger() {
+	document.body.style.backgroundColor = document.getElementById("mySelect").value;
+}
 </script>
 </head>
 <body>
 <h2>JavaScript Exercise 5c</h2> 
 <form>
 	<select id="mySelect">
-		<option>Red</option>
-		<option>Green</option>
-		<option>Blue</option>
-		<option>Yellow</option>
-		<option>Orange</option>
-		<option>Purple</option>
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+		<option value="blue">Blue</option>
+		<option value="yellow">Yellow</option>
+		<option value="orange">Orange</option>
+		<option value="purple">Purple</option>
 	</select>
-	<input type="button" onclick="getOptions()" value="Display the Options">
+	<input type="button" onclick="colorchanger()" value="Display the Options">
 </form>
 </body>
 </html>
