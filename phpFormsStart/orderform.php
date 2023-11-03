@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="assets/css/pizza.css" />
-	<script type="text/javascript" src="assets/script/pizza.js"></script>
-</head>
-<body>
+<?php
 
-	<div id="wrapper">
+$path = "./";
+$page = "Pizza Order";
+include($path ."assets/inc/header.php");
+?>
 
-	<h1>Eat more Pizza!</h1>
-	<p><img src="assets/img/hotpizza.png"></p>
 	<div id="container">
 		<h2>Order a Delicious Pizza!</h2>
 	
@@ -29,6 +23,7 @@
 			</p>
 		</form>
 	</div> 
-	<footer>Dan's Pizza Shoppe &reg;</footer>
-</body>
-</html>
+
+<?php 
+	include($path ."assets/inc/footer.php");
+?>
