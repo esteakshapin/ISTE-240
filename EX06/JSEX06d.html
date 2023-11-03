@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- ISTE240 Exercise 5d -->
+<meta charset=utf-8 />
+<title>Mouseover Red and Bold</title>
+<script>
+	//put a mouseover and a mouseout event on the p tag below
+	//create a function that is called on the mouseover that turns the text red
+	function mouseOverHandler(){
+		document.getElementById("rb").style.color =  document.getElementById("mySelect").value;
+	}
+	//create a function that is called on the mouseout that turns the text black
+	function mouseOutHandler(){
+		document.getElementById("rb").style.color = "black"
+	}
+</script>
+
+</head> 
+<body>
+	<div>
+		<h2>JavaScript Exercise 6d </h2> 
+	</div>
+	<div>
+		<p id="rb" onmouseover="mouseOverHandler()" onmouseout="mouseOutHandler()">This sentence will turn red when you mouseover it.</p>
+
+		<select id="mySelect">
+			<option value="red">Red</option>
+			<option value="green">Green</option>
+			<option value="blue">Blue</option>
+			<option value="yellow">Yellow</option>
+			<option value="orange">Orange</option>
+			<option value="purple">Purple</option>
+		</select>
+	</div>
+</body>
+</html>
