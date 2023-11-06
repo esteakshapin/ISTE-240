@@ -1,5 +1,7 @@
 <?php
 
+echo"test";
+
 $path = "./";
 $page = "Pizza Order";
 include($path ."assets/inc/header.php");
