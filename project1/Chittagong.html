@@ -11,6 +11,7 @@
             rel="stylesheet">
     </head>
     <body>
+        <!-- nav bar -->
         <nav>
             <img src="./static/images/Times of BD-logos_transparent.png"
                 alt="Times Of BD Logo">
@@ -78,6 +79,9 @@
 
             <a href="./bibliography.html"><span id="about-me">Work Cited</span></a>
         </nav>
+        <!-- nav bar -->
+
+        <!-- This carousel cycles through a list of images  -->
         <div class="carousel-container">
             <div class="carousel">
                 <!-- default image -->
@@ -90,6 +94,7 @@
             </div>
         </div>
 
+        <!-- main content section -->
         <div class="content">
             <h2>About</h2>
             <p>
@@ -166,8 +171,10 @@
             </p>
 
         </div>
+        <!-- main content section -->
 
         <script>
+            // list of image URL that the carousel uses to cycle through
             const imageUrls = [
                 './static/images/Chittagong-carousel/IMG_2062.jpg',
                 './static/images/Chittagong-carousel/IMG_2078.jpg',
@@ -186,12 +193,14 @@
             const carouselImg = document.getElementById("carousel-img");
             let currentIndex = 0;
 
+            // changes the current image shown by the carousel by updating the src to the next image in the list
+            // this code was written by me
             function changeImage(){
                 carouselImg.src = imageUrls[currentIndex % imageUrls.length]
                 currentIndex++;
             }
 
-            // Set a timer to update the image every 1.5 seconds
+            // Set a timer to update the image every 2 seconds
             setInterval(changeImage, 2000);
 
         </script>
