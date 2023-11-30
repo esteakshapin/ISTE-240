@@ -25,8 +25,10 @@
                     $stmt->close();
                 }
 
+                // querying for all the comments in the database
                 $res = $conn->query('SELECT `from`, `message`, `date` FROM `comments`');
-            
+                
+                // looping thru the table and displaying each entry in an <li>
                 if ($res) {
                     while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
                         echo '<li> <span style="color: green">' . $row['from'] . ': </span> ' . $row['message'] . ' @ <span style="color: gray">' . $row['date'] . "</li>";
@@ -41,11 +43,14 @@
     <hr>
     
     <h1>What do you have to say?</h1>
+
+    <!-- comment insert form -->
     <form action="" method="get">
         <label for="from">First Name</label>
         <input type="text" name="from"/>
         <br>
         <textarea name="message" rows="4" cols="50" placeholder="say what?"></textarea>
+        <br>
         <input type="submit" value="Add to the List">
     </form>
     
