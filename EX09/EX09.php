@@ -26,6 +26,16 @@
             }
         ?>
     </ul>
+
+    <hr>
+    
+    <h1>What do you have to say?</h1>
+    <form action="">
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name"/>
+        <br>
+        <textarea name="message" rows="4" cols="50" placeholder="say what?"></textarea>
+    </form>
     
 </body>
 </html>
