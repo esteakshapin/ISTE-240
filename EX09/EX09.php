@@ -14,6 +14,17 @@
         <?php 
             // get all the comments in the database
             if ($conn){
+                // check if we need to add a new comment
+                if (!empty($_GET['from']) && !empty($_GET['message'])) {
+                    $message = $_GET['message'];
+                    $from = $_GET['from'];
+
+                    $stmt = $conn->prepare('INSERT INTO `comments` (`from`, `message`) VALUES (?, ?)');
+                    $stmt->bind_param('ss', $from, $message);
+                    $stmt->execute();
+                    $stmt->close();
+                }
+
                 $res = $conn->query('SELECT `from`, `message`, `date` FROM `comments`');
             
                 if ($res) {
@@ -30,11 +41,12 @@
     <hr>
     
     <h1>What do you have to say?</h1>
-    <form action="">
-        <label for="first-name">First Name</label>
-        <input type="text" name="first-name"/>
+    <form action="" method="get">
+        <label for="from">First Name</label>
+        <input type="text" name="from"/>
         <br>
         <textarea name="message" rows="4" cols="50" placeholder="say what?"></textarea>
+        <input type="submit" value="Add to the List">
     </form>
     
 </body>
