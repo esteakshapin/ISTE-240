@@ -7,7 +7,19 @@
 </head>
 <body>
     <!-- Including the DB connection partial to connect to the database -->
-    <?php include('./dbCon.php') ?>
+    <?php
+
+    include('./dbCon.php');
+    
+    // get all the comments in the database
+    if ($conn){
+        echo '<h2>connected</h2>';
+        $res = $conn->query('SELECT * FROM `comments`');
+
+        echo $res;
+    }
+    
+    ?>
     <h1>What do you think?</h1>
 </body>
 </html>
