@@ -16,7 +16,13 @@
         echo '<h2>connected</h2>';
         $res = $conn->query('SELECT * FROM `comments`');
 
-        echo $res;
+        if($res){
+            while($row = mysqli_fetch_array($res, MYSQLI_ASSOC)){
+                $records[] = $row;
+            }
+        }
+
+        echo $records[0];
     }
     
     ?>
