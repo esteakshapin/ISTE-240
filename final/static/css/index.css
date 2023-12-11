@@ -19,6 +19,7 @@ html, body{
 
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 nav{
@@ -258,4 +259,13 @@ nav #about-me{
 
 .recipe-sections h4{
     font-style: italic;
+}
+
+.footer {
+    margin-top: auto;
+    border-top: 1px solid rgb(206, 199, 199);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: dimgray;
 }
