@@ -1,84 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Work Cited - Time of BD!</title>
-        <link rel="icon" type="image/png"
-            href="static/images/Times of BD-logos.jpeg">
-        <link rel="stylesheet" href="./static/css/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Rajdhani|Glegoo"
-            rel="stylesheet">
-    </head>
+    <!-- Header Section -->
+    <?php
+        $header = 'Work Cited - Time of BD!';
+        include './partials/header.php';
+    ?>
     <body>
         <!-- nav bar -->
-        <nav>
-            <img src="./static/images/Times of BD-logos_transparent.png"
-                alt="Times Of BD Logo">
-
-            <ul class="nav-center-items-container">
-                <a href="./index.html">
-                    <li class="nav-items">
-                        <div class="spacing"></div>
-                        Home
-                        <div class="spacing"></div>
-                    </li>
-                </a>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Cities
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./dhaka.html">
-                            <li class="sub-nav-menu-items">Dhaka</li>
-                        </a>
-                        <a href="./Chittagong.html">
-                            <li class="sub-nav-menu-items">Chittagong</li>
-                        </a>
-                        <a href="./Feni.html">
-                            <li class="sub-nav-menu-items">Feni</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Food
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./appetizer.html">
-                            <li class="sub-nav-menu-items">Appetizer</li>
-                        </a>
-                        <a href="./entree.html">
-                            <li class="sub-nav-menu-items">Entree</li>
-                        </a>
-                        <a href="./desert.html">
-                            <li class="sub-nav-menu-items">Desert</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Vacation
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./cox-bazar.html">
-                            <li class="sub-nav-menu-items">Cox Bazar</li>
-                        </a>
-                        <a href="./rangamati.html">
-                            <li class="sub-nav-menu-items">Rangamati</li>
-                        </a>
-                        <a href="./st-martin-island.html">
-                            <li class="sub-nav-menu-items">St. Martin's Island</li>
-                        </a>
-                    </ul>
-                </li>
-            </ul>
-
-            <span id="about-me" class="active">Work Cited</span>
-        </nav>
+        <?php
+            $active = "";
+            include './partials/navbar.php';
+        
+        ?>
         <!-- nav bar     -->
         
         <div class="content">
@@ -135,11 +68,13 @@
                 <li><b>Samosa Photo:</b> https://www.marionskitchen.com/wp-content/uploads/2023/04/Samosa-9.jpg
                 </li>
             </ul>
+
             <h3>Entree Page</h2>
             <ul>
                 <li><b>Chicken Biryani Photo:</b> https://images.food52.com/7f0yncraWeYUJG_lLbH2ie1xd6g=/2016x1344/d815e816-4664-472e-990b-d880be41499f--chicken-biryani-recipe.jpg
                 </li>
             </ul>
+
             <h3>Desert Page</h2>
             <ul>
                 <li><b>Rasgulla Photo:</b> https://static.toiimg.com/photo/52743612.cms
@@ -172,5 +107,8 @@
             </ul>
 
         </div>
+
+        <!-- footer section -->
+        <?php include "./partials/footer.php" ?>
     </body>
 </html>

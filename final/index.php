@@ -51,9 +51,9 @@
                     native's prospective!
 
                     <br>
-                    <a href="./bibliography.html">Work Cited Page</a>
+                    <a href="./bibliography.php">Work Cited Page</a>
                     <br>
-                    <a href="./grading.html">Grading Page</a>
+                    <a href="./grading.php">Grading Page</a>
                 </span>
 
             </p>

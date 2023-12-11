@@ -65,5 +65,5 @@
         </li>
     </ul>
 
-    <a href="./bibliography.html"><span id="about-me">Work Cited</span></a>
+    <a href="./bibliography.php"><span id="about-me">Work Cited</span></a>
 </nav>
