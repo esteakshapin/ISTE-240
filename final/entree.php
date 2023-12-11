@@ -1,98 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Entree - Time of BD!</title>
-        <link rel="icon" type="image/png"
-            href="static/images/Times of BD-logos.jpeg">
-        <link rel="stylesheet" href="./static/css/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Rajdhani|Glegoo"
-            rel="stylesheet">
-    </head>
+    <!-- Header Section -->
+    <?php
+        $header = 'Entree - Time of BD!';
+        include './partials/header.php';
+    ?>
     <body>
         <!-- nav bar -->
-        <nav>
-            <img src="./static/images/Times of BD-logos_transparent.png"
-                alt="Times Of BD Logo">
-
-            <ul class="nav-center-items-container">
-                <a href="./index.html">
-                    <li class="nav-items">
-                        <div class="spacing"></div>
-                        Home
-                        <div class="spacing"></div>
-                    </li>
-                </a>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Cities
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./dhaka.html">
-                            <li class="sub-nav-menu-items">Dhaka</li>
-                        </a>
-                        <a href="./Chittagong.html">
-                            <li class="sub-nav-menu-items">Chittagong</li>
-                        </a>
-                        <a href="./Feni.html">
-                            <li class="sub-nav-menu-items">Feni</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items active">
-                    <div class="spacing"></div>
-                    Food
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./appetizer.html">
-                            <li class="sub-nav-menu-items">Appetizer</li>
-                        </a>
-                        <a href="./entree.html">
-                            <li class="sub-nav-menu-items">Entree</li>
-                        </a>
-                        <a href="./desert.html">
-                            <li class="sub-nav-menu-items">Desert</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Vacation
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./cox-bazar.html">
-                            <li class="sub-nav-menu-items">Cox Bazar</li>
-                        </a>
-                        <a href="./rangamati.html">
-                            <li class="sub-nav-menu-items">Rangamati</li>
-                        </a>
-                        <a href="./st-martin-island.html">
-                            <li class="sub-nav-menu-items">St. Martin's Island</li>
-                        </a>
-                    </ul>
-                </li>
-            </ul>
-
-            <a href="./bibliography.html"><span id="about-me">Work Cited</span></a>
-        </nav>
+        <?php
+            $active = "Food";
+            include './partials/navbar.php';
+        
+        ?>
         <!-- nav bar -->
 
         <!-- NOTE: This carousel only has one image (the default image) -->
-        <div class="carousel-container">
-            <div class="carousel">
-                <!-- default image -->
-                <img id="carousel-img"
-                    src="https://images.food52.com/7f0yncraWeYUJG_lLbH2ie1xd6g=/2016x1344/d815e816-4664-472e-990b-d880be41499f--chicken-biryani-recipe.jpg"
-                    alt="Image of Chicken Biryani (Bengali rice and chicken dish) ">
-            </div>
-            <div class="title-box">
-                <h1>Entree</h1>
-            </div>
-        </div>
+        <?php
+            $carouselSrc = "https://images.food52.com/7f0yncraWeYUJG_lLbH2ie1xd6g=/2016x1344/d815e816-4664-472e-990b-d880be41499f--chicken-biryani-recipe.jpg";
+            $alt = "Image of Chicken Biryani (Bengali rice and chicken dish)";
+            $carouselTitle = "Entree";
+            include './partials/carousel.php';
+        
+        ?>
 
         <!-- main content section -->
         <div class="content">
@@ -159,5 +88,8 @@
             <h3>Serve:</h3>
             <p>Bangladeshi Chicken Biryani is best enjoyed hot, garnished with additional fried onions and fresh coriander leaves. Serve it with raita (yogurt sauce) or a side salad for the complete experience. Enjoy!</p>
         </div>
+
+        <!-- footer section -->
+        <?php include "./partials/footer.php" ?>
     </body>
 </html>
