@@ -1,98 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Appetizer - Time of BD!</title>
-        <link rel="icon" type="image/png"
-            href="static/images/Times of BD-logos.jpeg">
-        <link rel="stylesheet" href="./static/css/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Rajdhani|Glegoo"
-            rel="stylesheet">
-    </head>
+    <!-- Header Section -->
+    <?php
+        $header = 'Appetizer - Time of BD!';
+        include './partials/header.php';
+    ?>
     <body>
         <!-- nav bar -->
-        <nav>
-            <img src="./static/images/Times of BD-logos_transparent.png"
-                alt="Times Of BD Logo">
-
-            <ul class="nav-center-items-container">
-                <a href="./index.html">
-                    <li class="nav-items">
-                        <div class="spacing"></div>
-                        Home
-                        <div class="spacing"></div>
-                    </li>
-                </a>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Cities
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./dhaka.html">
-                            <li class="sub-nav-menu-items">Dhaka</li>
-                        </a>
-                        <a href="./Chittagong.html">
-                            <li class="sub-nav-menu-items">Chittagong</li>
-                        </a>
-                        <a href="./Feni.html">
-                            <li class="sub-nav-menu-items">Feni</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items active">
-                    <div class="spacing"></div>
-                    Food
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./appetizer.html">
-                            <li class="sub-nav-menu-items">Appetizer</li>
-                        </a>
-                        <a href="./entree.html">
-                            <li class="sub-nav-menu-items">Entree</li>
-                        </a>
-                        <a href="./desert.html">
-                            <li class="sub-nav-menu-items">Desert</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Vacation
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./cox-bazar.html">
-                            <li class="sub-nav-menu-items">Cox Bazar</li>
-                        </a>
-                        <a href="./rangamati.html">
-                            <li class="sub-nav-menu-items">Rangamati</li>
-                        </a>
-                        <a href="./st-martin-island.html">
-                            <li class="sub-nav-menu-items">St. Martin's Island</li>
-                        </a>
-                    </ul>
-                </li>
-            </ul>
-
-            <a href="./bibliography.html"><span id="about-me">Work Cited</span></a>
-        </nav>
+        <?php
+            $active = "Food";
+            include './partials/navbar.php';
+        
+        ?>
         <!-- nav bar -->
 
         <!-- NOTE: This carousel only has one image (the default image) -->
-        <div class="carousel-container">
-            <div class="carousel">
-                <!-- default image -->
-                <img id="carousel-img"
-                    src="https://www.marionskitchen.com/wp-content/uploads/2023/04/Samosa-9.jpg"
-                    alt="Image of Samosas (Bengali Potato Filled Appetizer)">
-            </div>
-            <div class="title-box">
-                <h1>Appetizer</h1>
-            </div>
-        </div>
+        <?php
+            $carouselSrc = "https://www.marionskitchen.com/wp-content/uploads/2023/04/Samosa-9.jpg";
+            $alt = "Image of Samosas (Bengali Potato Filled Appetizer)";
+            $carouselTitle = "Appetizer";
+            include './partials/carousel.php';
+        
+        ?>
 
         <!-- The content body -->
         <div class="content">
@@ -175,5 +104,8 @@
             <h3>Serve:</h3>
             <p>Bangladeshi Samosas are best enjoyed hot and crispy with chutney, such as tamarind or mint chutney. They make for a delightful snack or appetizer that's sure to be a hit at any gathering. Enjoy!</p>
         </div>
+
+        <!-- footer section -->
+        <?php include "./partials/footer.php" ?>
     </body>
 </html>

@@ -187,6 +187,7 @@
             </div>
         </div>
 
+        <!-- footer section -->
         <?php include "./partials/footer.php" ?>
 
         <script>

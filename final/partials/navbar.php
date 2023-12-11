@@ -18,13 +18,13 @@
             Cities
             <div class="spacing"></div>
             <ul class="sub-nav-menu">
-                <a href="./dhaka.html">
+                <a href="./dhaka.php">
                     <li class="sub-nav-menu-items">Dhaka</li>
                 </a>
-                <a href="./Chittagong.html">
+                <a href="./Chittagong.php">
                     <li class="sub-nav-menu-items">Chittagong</li>
                 </a>
-                <a href="./Feni.html">
+                <a href="./Feni.php">
                     <li class="sub-nav-menu-items">Feni</li>
                 </a>
             </ul>
@@ -35,13 +35,13 @@
             Food
             <div class="spacing"></div>
             <ul class="sub-nav-menu">
-                <a href="./appetizer.html">
+                <a href="./appetizer.php">
                     <li class="sub-nav-menu-items">Appetizer</li>
                 </a>
-                <a href="./entree.html">
+                <a href="./entree.php">
                     <li class="sub-nav-menu-items">Entree</li>
                 </a>
-                <a href="./desert.html">
+                <a href="./desert.php">
                     <li class="sub-nav-menu-items">Desert</li>
                 </a>
             </ul>
@@ -52,13 +52,13 @@
             Vacation
             <div class="spacing"></div>
             <ul class="sub-nav-menu">
-                <a href="./cox-bazar.html">
+                <a href="./cox-bazar.php">
                     <li class="sub-nav-menu-items">Cox Bazar</li>
                 </a>
-                <a href="./rangamati.html">
+                <a href="./rangamati.php">
                     <li class="sub-nav-menu-items">Rangamati</li>
                 </a>
-                <a href="./st-martin-island.html">
+                <a href="./st-martin-island.php">
                     <li class="sub-nav-menu-items">St. Martin's Island</li>
                 </a>
             </ul>
