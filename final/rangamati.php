@@ -1,97 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rangamati - Time of BD!</title>
-        <link rel="icon" type="image/png"
-            href="static/images/Times of BD-logos.jpeg">
-        <link rel="stylesheet" href="./static/css/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Rajdhani|Glegoo"
-            rel="stylesheet">
-    </head>
+
+    <!-- Header Section -->
+    <?php
+        $header = 'Rangamati - Time of BD!';
+        include './partials/header.php';
+    ?>
     <body>
         <!-- nav bar -->
-        <nav>
-            <img src="./static/images/Times of BD-logos_transparent.png"
-                alt="Times Of BD Logo">
-
-            <ul class="nav-center-items-container">
-                <a href="./index.html">
-                    <li class="nav-items">
-                        <div class="spacing"></div>
-                        Home
-                        <div class="spacing"></div>
-                    </li>
-                </a>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Cities
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./dhaka.html">
-                            <li class="sub-nav-menu-items">Dhaka</li>
-                        </a>
-                        <a href="./Chittagong.html">
-                            <li class="sub-nav-menu-items">Chittagong</li>
-                        </a>
-                        <a href="./Feni.html">
-                            <li class="sub-nav-menu-items">Feni</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items">
-                    <div class="spacing"></div>
-                    Food
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./appetizer.html">
-                            <li class="sub-nav-menu-items">Appetizer</li>
-                        </a>
-                        <a href="./entree.html">
-                            <li class="sub-nav-menu-items">Entree</li>
-                        </a>
-                        <a href="./desert.html">
-                            <li class="sub-nav-menu-items">Desert</li>
-                        </a>
-                    </ul>
-                </li>
-
-                <li class="nav-items active">
-                    <div class="spacing"></div>
-                    Vacation
-                    <div class="spacing"></div>
-                    <ul class="sub-nav-menu">
-                        <a href="./cox-bazar.html">
-                            <li class="sub-nav-menu-items">Cox Bazar</li>
-                        </a>
-                        <a href="./rangamati.html">
-                            <li class="sub-nav-menu-items">Rangamati</li>
-                        </a>
-                        <a href="./st-martin-island.html">
-                            <li class="sub-nav-menu-items">St. Martin's Island</li>
-                        </a>
-                    </ul>
-                </li>
-            </ul>
-
-            <a href="./bibliography.html"><span id="about-me">Work Cited</span></a>
-        </nav>
-        <!-- nav bar -->
+        <?php
+            $active = "Vacation";
+            include './partials/navbar.php';
         
-        <div class="carousel-container">
-            <div class="carousel">
-                <!-- default image -->
-                <img id="carousel-img"
-                    src="./static/images/rangamati-carousel/IMG_2092.jpg"
-                    alt="Slideshow of images from Shapin's trip in Rangamati">
-            </div>
-            <div class="title-box">
-                <h1>Rangamati</h1>
-            </div>
-        </div>
+        ?>
+        <!-- nav bar -->
+
+        <!-- This carousel cycles through a list of images -->
+        <?php
+            $carouselSrc = "./static/images/rangamati-carousel/IMG_2092.jpg";
+            $alt = "Slideshow of images from Shapin's trip in Rangamati";
+            $carouselTitle = "Rangamati";
+            include './partials/carousel.php';
+        
+        ?>
 
         <div class="content">
             <h2>Rangamati</h2>
@@ -135,6 +66,9 @@
                 
             </div>
         </div>
+
+        <!-- footer section -->
+        <?php include "./partials/footer.php" ?>
 
         <script>
             // list of image URL that the carousel uses to cycle through
