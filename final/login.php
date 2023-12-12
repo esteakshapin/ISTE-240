@@ -10,12 +10,11 @@
 <?php
 	// check if POST dictionary is null (means this was a get request - not trying to register yet)
 
-echo "initial";
+    $errors = null;
 
 	if($conn){
     echo "inside conn";
 		if($_POST != null){
-        echo "inside post";
 			$formElements = array("username", "password");
 	
 			$elementsEmpty = false;
@@ -29,7 +28,6 @@ echo "initial";
 	
 			// check all the elements are not empty and the passwords match
 			if(!$elementsEmpty){
-            echo "preparing statement";
 				mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
 				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name`, `password` FROM `240Users` WHERE `username` = ? LIMIT 1");
@@ -46,12 +44,14 @@ echo "initial";
                 if ($stmt->fetch()) {
                     // verify the password
                     if (password_verify($_POST["password"], $hashed_password)) {
-                        echo "User found: " . $first_name . " " . $last_name;
+                        $_SESSION['id'] = $id;
+                        $_SESSION['first_name'] = $first_name;
+                        $_SESSION['last_name'] = $last_name;
                     } else {
-                        echo "Invalid username or password";
+                        $errors = "Invalid username or password";
                     }
                 } else {
-                    echo "No user found with that username";
+                    $errors = "No user found with that username";
                 }
 
 				$stmt->close();
@@ -73,6 +73,14 @@ echo "initial";
 
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="register-form" method="POST">
 		<h1>Login</h1>
+
+        <?php 
+            if($errors){
+            echo '<div class="error-message">' . $errors . '</div>';
+            }
+
+        ?>
+
 		<label for="username">username:</label>
 		<input type="text" name="username" id="username" required><br><br>
 
