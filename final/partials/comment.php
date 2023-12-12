@@ -20,7 +20,7 @@
                             if ($thumbs_up == null) {
                             echo "0";
                             }else{
-                            echo strlen($thumbs_up);
+                            echo strlen($thumbs_up) / 2;
                             }
                         ?>
                         Votes
@@ -43,7 +43,7 @@
                             if ($thumbs_down == null) {
                             echo "0";
                             }else{
-                            echo strlen($thumbs_down);
+                            echo strlen($thumbs_down) / 2;
                             }
                         ?>
                         Votes
