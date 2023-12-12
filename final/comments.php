@@ -70,6 +70,8 @@
                     $from = $row['from'];
                     $date = $row['date'];
                     $message = $row['message'];
+                    $thumbs_up = $row["thumbs_up"];
+                    $thumbs_down = $row["thumbs_down"];
                     include './partials/comment.php';
                     $counter += 1;
 

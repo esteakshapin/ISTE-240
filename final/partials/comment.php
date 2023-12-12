@@ -12,7 +12,14 @@
                     &#128077;
                 </span>
                 <span>
-                    10 Votes
+                    <?php 
+                        if ($thumbs_up == null) {
+                        echo "0";
+                        }else{
+                        echo strlen($thumbs_up);
+                        }
+                    ?>
+                    Votes
                 </span>
             </div>
 
@@ -21,7 +28,15 @@
                     &#128078; 
                 </span>
                 <span>
-                    10 Votes
+                <?php 
+                    if ($thumbs_down == null) {
+                    echo "0";
+                    }else{
+                    echo strlen($thumbs_down);
+                    }
+                ?>
+                    
+                    Votes
                 </span>
             </div>
         </div>
