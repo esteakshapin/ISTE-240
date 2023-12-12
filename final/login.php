@@ -35,6 +35,8 @@ echo "initial";
 				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name` FROM `240Users` WHERE `username` = ? AND `password` = ? LIMIT 1");
 
                 $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+            echo "<br> password " . $password;
 	
 				//bind
 				$stmt->bind_param("ss", $_POST["username"], $password);
