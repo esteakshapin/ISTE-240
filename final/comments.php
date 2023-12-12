@@ -74,7 +74,7 @@
             }
 
             //trying to thumbs down
-            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_down"){
+            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_down" && !empty($_POST["id"])){
                 // first get comment that the user is trying to thumbs up
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	

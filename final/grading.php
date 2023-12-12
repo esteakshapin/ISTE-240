@@ -70,6 +70,14 @@
                     <h4>DHTML Element</h4>
                     The first javascript component is an automatic image carousel that cycles through a given list of images. The website is about my trip to Bangladesh and this carousel allows me to include relevant and fun visual elements to portray my vacation. I implemented this feature by using a div with an img and a title that is positioned within the image. The title is positioned in the center of the carousel using absolute position. Using JavaScript, the src of the IMG tag is changed every 2 section to the next index of the list of images, allowing for a cycling carousel.
                 </li>
+                <li>
+                    <h4>EXTRAS</h4>
+                    <ol>
+                        <li>Implemented authentication with persisting user state. This includes registration, login, and logout. This feature can be observed/accessed from the navbar on the right side. Future improvements can include a user information page to see account info, add profile picture, and update account info.</li>
+                        <li>A persistent comment section with user authentication and a rating system. Users must authenticate to leave reviews and rate other comments. Database keeps track of users who rate comments and displays your own rating with highlighted elements.</li>
+                    </ol>
+                    
+                </li>
             </ul>
 
         </div>
