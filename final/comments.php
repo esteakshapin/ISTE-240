@@ -101,7 +101,7 @@
                 $stmt->close();
 
                 //update comment
-                $stmt = $conn->prepare('UPDATE `240Comments` SET `thumbs_up` = ? WHERE `id` = ?');
+                $stmt = $conn->prepare('UPDATE `240Comments` SET `thumbs_down` = ? WHERE `id` = ?');
                 $stmt->bind_param('si', $thumbs_up, $_POST["id"]);
                 $stmt->execute();
                 $stmt->close();
