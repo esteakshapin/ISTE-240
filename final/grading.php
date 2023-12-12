@@ -75,6 +75,9 @@
                     <ol>
                         <li>Implemented authentication with persisting user state. This includes registration, login, and logout. This feature can be observed/accessed from the navbar on the right side. Future improvements can include a user information page to see account info, add profile picture, and update account info.</li>
                         <li>A persistent comment section with user authentication and a rating system. Users must authenticate to leave reviews and rate other comments. Database keeps track of users who rate comments and displays your own rating with highlighted elements.</li>
+                        <li>FAVICON of site logo on all webpages</li>
+                        <li>Mobile First Design: The webpage is well designed for smaller screen as well as desktops. The navbar has a mobile version with a dropdown menu. This can be observed on the navbar on any page for screen sizes smaller than 740 px.</li>
+                        <li>Clean Design: The website follows a CRAP design principle and have a minimalistic yet functional vibe.</li>
                     </ol>
                     
                 </li>

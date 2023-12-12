@@ -28,7 +28,6 @@ nav{
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
-    padding-right: 1rem;
 }
 
 nav img{
@@ -385,3 +384,75 @@ nav #user-profile{
     max-height: 350px;
     overflow-y: auto;
 }
+
+.user-section{
+    padding-right: 1rem;
+}
+
+nav .hamburgerIcon{
+    display: none;
+    font-size: larger;
+    padding-right: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.mobile-menu{
+    display: none;
+    width: 100%;
+    padding: .5rem;
+    padding-top: 0px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1rem;
+}
+
+.mobile-sub-nav-menu{
+    list-style: none;
+}
+
+.mobile-sub-nav-menu-items{
+    padding-bottom: .5rem;
+}
+
+.mobile-sub-nav-menu-items a{
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-sub-nav-menu-items.active a{
+    color: var(--office-green);
+}
+
+/* transition to mobile navbar */
+@media screen and (max-width: 740px) {
+    nav .nav-center-items-container{
+        display: none;
+    }
+
+    nav .user-section{
+        display: none;
+    }
+
+    nav .hamburgerIcon{
+        display: block;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+}
+
+.indented{
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+
+.hide{
+    display: none;
+}
+
+h4.active{
+    color: var(--office-green);
+}
+

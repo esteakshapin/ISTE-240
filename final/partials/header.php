@@ -1,5 +1,5 @@
 <!-- include the database connection -->
-<?php include "../dbCon.php"?>
+<?php include "/../dbCon.php"?>
 
 <head>
     <meta charset="UTF-8">
@@ -11,4 +11,7 @@
     <link rel="stylesheet" href="./static/css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani%7CGlegoo"
         rel="stylesheet">
+
+    <!-- used for the hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
