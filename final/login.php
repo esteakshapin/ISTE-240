@@ -28,10 +28,12 @@
 				
 				mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
-				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name` FROM `240Users` WHERE `username` = '?' AND `password` = '?' LIMIT 50");
+				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name` FROM `240Users` WHERE `username` = '?' AND `password` = ? LIMIT 50");
+
+                $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 	
 				//bind
-				$stmt->bind_param("ss", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT));
+				$stmt->bind_param("ss", $_POST["username"], $password);
 	
 				//execute
 				$stmt->execute();
