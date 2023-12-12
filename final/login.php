@@ -7,13 +7,19 @@
 	include './partials/header.php';
 ?>
 
+<body>
+	<!-- nav bar -->
+    <?php
+        $active = "";
+        include './partials/navbar.php';
+    ?>
+
 <?php
 	// check if POST dictionary is null (means this was a get request - not trying to register yet)
 
     $errors = null;
 
 	if($conn){
-    echo "inside conn";
 		if($_POST != null){
 			$formElements = array("username", "password");
 	
@@ -63,13 +69,6 @@
 
 	
 ?>
-
-<body>
-	<!-- nav bar -->
-    <?php
-        $active = "";
-        include './partials/navbar.php';
-    ?>
 
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="register-form" method="POST">
 		<h1>Login</h1>
