@@ -36,7 +36,7 @@ echo "initial";
 
                 $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-            echo "<br> password " . $password;
+            echo "<br> password " . $password . "<br>";
 	
 				//bind
 				$stmt->bind_param("ss", $_POST["username"], $password);
