@@ -33,8 +33,8 @@
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <input type="hidden" name="action" value="thumbs_down">
-                <input type="hidden" name="from" value="<?php echo $_SESSION['id']?>">
-                <button type="submit" class="comment-rate-item thumbs-down <?php if (strpos($thumbs_down, (string)$_SESSION['id']) !== false) {echo "active";}?>">
+                <input type="hidden" name="from" value="<?php if (array_key_exists("id", $_SESSION)) {echo $_SESSION['id'];} ?>">
+                <button type="submit" class="comment-rate-item thumbs-down <?php if (array_key_exists("id", $_SESSION) && strpos($thumbs_down, (string)$_SESSION['id']) !== false) {echo "active";}?>">
                     <span>
                         &#128078; 
                     </span>
