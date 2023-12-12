@@ -30,7 +30,7 @@ nav{
     align-items: center;
 }
 
-nav img{
+nav img, .mobile-sub-nav-menu img{
     width: 96px;
     height: 96px;
 }
