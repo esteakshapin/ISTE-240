@@ -28,7 +28,7 @@
             <h2>About</h2>
             <p>
                 <img src="https://geology.com/world/bangladesh-map.gif"
-                    alt="Map of Bangladesh" width="150px" height="150px"
+                    alt="Map of Bangladesh" width="150" height="150"
                     style="float: left; margin-right: .5rem;">
                 <span style="vertical-align: top;">
                     <i><b>Bangladesh</b></i>, a small but culturally rich

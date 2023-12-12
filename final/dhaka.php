@@ -29,7 +29,7 @@
             <p>
                 <img
                     src="https://thumbs.dreamstime.com/z/dhaka-vector-map-detailed-city-administrative-area-cityscape-urban-panorama-royalty-free-illustration-outline-highways-237064275.jpg"
-                    alt="Map of Bangladesh" width="150px" height="150px"
+                    alt="Map of Bangladesh" width="150" height="150"
                     style="float: left; margin-right: .5rem;">
                 <span style="vertical-align: top;">
                     Dhaka, the capital city of Bangladesh, is not only the
@@ -56,7 +56,7 @@
                     <br>
                     <img
                         src="https://ourdhaka.weebly.com/uploads/3/8/4/8/38485323/header_images/1414914896.jpg"
-                        alt="Map of Bangladesh" width="150px" height="150px"
+                        alt="Map of Bangladesh" width="150" height="150"
                         style="float: right; margin-right: .5rem;">
                     During the British colonial period, Dhaka played
                     a crucial role in the region's administration and economy.
@@ -77,7 +77,7 @@
 
                 <ol>
                     <li>
-                        <img src="https://img.atlasobscura.com/xd_IblV_eIloy2MwZIIvLHk7BG5nyTKVJFCsDSPGizo/rt:fit/w:600/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kMDRh/NmNiOC0yZDg1LTQ0/YjctOGRlNC02OWZi/YTM4Nzc1YTExNTUx/MDQ3Y2VjNGYyOWRl/ZmZfODAwcHgtRGhh/a2FfTGFsYmFnaF9G/b3J0XzUuSlBH.jpg" alt="" width="100px" height="100px" style="float: right">
+                        <img src="https://img.atlasobscura.com/xd_IblV_eIloy2MwZIIvLHk7BG5nyTKVJFCsDSPGizo/rt:fit/w:600/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL3BsYWNl/X2ltYWdlcy9kMDRh/NmNiOC0yZDg1LTQ0/YjctOGRlNC02OWZi/YTM4Nzc1YTExNTUx/MDQ3Y2VjNGYyOWRl/ZmZfODAwcHgtRGhh/a2FfTGFsYmFnaF9G/b3J0XzUuSlBH.jpg" alt="" width="100" height="100" style="float: right">
                         <b>Lalbagh Fort: </b> This 17th-century Mughal fort is a
                         great example of Mughal architecture. It houses a
                         mosque, a tomb, and a beautiful garden, making it a
@@ -102,7 +102,6 @@
                         example of Islamic architecture.
                     </li>
                 </ol>
-            </p>
 
             <h3>Population</h3>
             <p>

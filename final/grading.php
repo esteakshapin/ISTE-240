@@ -50,6 +50,18 @@
                 <li>This was a mobile first design, as the website uses flex-box to properly wrap elements for smaller screens. The design is also mobile friendly as it has a simplistic look with contrasting font and font sizes that make it easier to read on mobile devices.</li> 
             </ul>
 
+            <h1>Final Project Update</h1>
+            <ul>
+                <li>
+                    <h4>PHP Transformation</h4>
+                    Refactored all pages to be php and use partials. Header, navbar, carousel, and footer (added in this version) has been implemented as php partials and are being incorporated in all pages using include. This has significantly reduced repetitiveness and follow the DRY
+                </li>
+
+                <li>
+                    <h4></h4>
+                </li>
+            </ul>
+
         </div>
 
         <!-- footer section -->

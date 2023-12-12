@@ -29,7 +29,7 @@
             <p>
                 <img
                     src="./static/images/Chittagong-carousel/Chattogram_map.svg"
-                    alt="Map of Bangladesh" width="150px" height="150px"
+                    alt="Map of Bangladesh" width="150" height="150"
                     style="float: left; margin-right: .5rem;">
                 <span style="vertical-align: top;">
                     Chittagong, officially known as Chattogram, is a busy coastal city in southeastern Bangladesh. It is the second-largest city in the country and holds immense cultural, historical, and economic significance. Being one of the biggest port city in the all of southeast Asia, the city is marked by ships, trucks, and delicious seafood!
@@ -46,7 +46,7 @@
                     <br>
                     <img
                         src="https://thebigindianpicture.com/wp-content/uploads/2012/10/Production-Stills-29-768x512.jpg"
-                        alt="Map of Bangladesh" width="150px" height="150px"
+                        alt="Map of Bangladesh" width="150" height="150"
                         style="float: right; margin-right: .5rem;">
                         During the Bangladesh Liberation War in 1971, however, Chittagong was at the heart of it all as the people living here actively fought in the struggle for independence from Pakistan. Various key victories, like The Chittagong armoury raid and Battle of Jalalabad helped give birth to the nation now known as Bangladesh!
                     <br>
@@ -62,17 +62,14 @@
 
                 <ol>
                     <li>
-                        <img src="https://fadangrandal.files.wordpress.com/2015/10/10255099_539292822865188_762746760322278182_o.jpg" alt="" width="100px" height="100px" style="float: right; margin-left: .5rem;">
+                        <img src="https://fadangrandal.files.wordpress.com/2015/10/10255099_539292822865188_762746760322278182_o.jpg" alt="" width="100" height="100" style="float: right; margin-left: .5rem;">
                         
                         <b>Chittagong Hill Tracts: </b> This hilly region surrounding Chittagong is known for its breathtaking landscapes, indigenous communities, and unique cultural traditions.
                     <li>
                         <b>Kaptai Lake: </b> Located just outside Chittagong, Kaptai Lake is one of the largest man-made lakes in the world and offers stunning views of the surrounding hills and forests.
                     </li>
                     <li>
-                        <b>Foy's Lake: </b> A picturesque artificial lake located in the city, Foy's Lake is a popular spot where people can enjoy boat rides and scenic views away from the busy city.</li>
-
-
-                        
+                        <b>Foy's Lake: </b> A picturesque artificial lake located in the city, Foy's Lake is a popular spot where people can enjoy boat rides and scenic views away from the busy city.
                     </li>
                     <li>
                         <b>War Cemetery: </b> The Chittagong War Cemetery is a great reminder of the sacrifices made during World War II. It is the final resting place for soldiers who served in the region during the war.
@@ -81,13 +78,12 @@
                         <b>Patenga Beach: </b>Patenga Beach is a popular destination for both locals and tourists, offering sandy shores and amazing views of the Bay of Bengal.
                     </li>
                 </ol>
-            </p>
 
             <h3>Population</h3>
             <p>
                 <img
                         src="https://joc.com/content-assets/styles/feature_image_1500w/s3%2Ffield_feature_image%2FChittagong.1111_4.jpg"
-                        alt="Map of Bangladesh" width="150px" height="150px"
+                        alt="Map of Bangladesh" width="150" height="150"
                         style="float: right; margin-right: .5rem;">
                 Chittagong is a diverse and dynamic city with a mix of ethnicities and cultures with its own distinct dialect. It serves as a major industrial and commercial center, contributing significantly to Bangladesh's economy.
                 <br>
