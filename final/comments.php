@@ -27,6 +27,9 @@
 		if($_POST != null){
             // trying to add a new comment
             if(!empty($_POST['comment'])){
+                mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+                
                 $message = $_GET['comment'];
                 $from = $_SESSION['id'];
 
