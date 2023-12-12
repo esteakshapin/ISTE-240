@@ -10,8 +10,12 @@
 <?php
 	// check if POST dictionary is null (means this was a get request - not trying to register yet)
 
+echo "initial";
+
 	if($conn){
+    echo "inside conn";
 		if($_POST != null){
+        echo "inside post";
 			$formElements = array("username", "password");
 	
 			$elementsEmpty = false;
@@ -25,7 +29,7 @@
 	
 			// check all the elements are not empty and the passwords match
 			if(!$elementsEmpty){
-				
+            echo "preparing statement";
 				mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
 				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name` FROM `240Users` WHERE `username` = ? AND `password` = ? LIMIT 1");
@@ -38,9 +42,14 @@
 				//execute
 				$stmt->execute();
                 $stmt->bind_result($id, $first_name, $last_name);
-                $stmt->fetch();
 
-                echo $id;
+
+                // Fetch the results
+                if ($stmt->fetch()) {
+                    echo "User found: " . $first_name . " " . $last_name;
+                } else {
+                    echo "Invalid username or password";
+                }
 
 				$stmt->close();
 	
