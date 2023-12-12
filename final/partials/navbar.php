@@ -78,7 +78,7 @@
         </li>
 
         <li class="nav-items <?php if ($active == "About") {echo 'active';}?>" >
-            <a href="./comments.php">
+            <a href="./grading.php">
                 <div class="spacing"></div>
                 About
                 <div class="spacing"></div>

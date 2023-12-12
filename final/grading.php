@@ -8,7 +8,7 @@
     <body>
         <!-- nav bar -->
         <?php
-            $active = "";
+            $active = "About";
             include './partials/navbar.php';
         
         ?>

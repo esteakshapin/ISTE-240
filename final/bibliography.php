@@ -8,7 +8,7 @@
     <body>
         <!-- nav bar -->
         <?php
-            $active = "";
+            $active = "Work-Cited";
             include './partials/navbar.php';
         
         ?>
