@@ -90,7 +90,7 @@ nav .nav-center-items-container .sub-nav-menu .sub-nav-menu-items:hover{
     display: block;
 }
 
-nav #about-me{
+nav #login{
     font-family: var(--primary-font);
     font-weight: bold;
 }
@@ -337,4 +337,31 @@ nav #user-profile{
     height: 30px;
     background-color: lightgray;
     border-radius: 50%;
+}
+
+.register-form{
+    padding: 1rem;
+    border: 1px solid lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-top: 3rem;
+}
+
+.register-form div{
+    margin-bottom: 1rem;
+}
+
+.register-form div input{
+    float: right;
+}
+
+.register-form div label{
+    margin-right: .3rem;
+}
+
+#register-link{
+    float: right;
+    color: gray;
+    font-style: italic;
 }

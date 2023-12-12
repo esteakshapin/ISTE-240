@@ -1,5 +1,12 @@
 <!-- NOTE: the navbar requires the active variable to be set in order to display teh current page -->
 
+<?php
+
+session_name("eks3146_240_final");
+session_start();
+
+?>
+
 <nav>
     <img src="./static/images/Times-of-BD-logos_transparent.png"
         alt="Times Of BD Logo">
@@ -95,6 +102,15 @@
     </ul>
 
     <a href="./register.php">
-        <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile">
+        <!-- if user is logged in, display user icon -->
+        <?php 
+        if ($_SESSION["user_id"] && $_SESSION["first_name"] && $_SESSION["last_name"]) {
+            echo '<img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile">';
+        }else{
+            echo '<a href="./login.php" id="login">Log In</a>';
+        }
+        
+        ?>
+        
     </a>
 </nav>

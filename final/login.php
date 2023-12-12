@@ -3,7 +3,7 @@
 <html lang="en">
 <!-- Header Section -->
 <?php
-	$header = 'Register - Time of BD!';
+	$header = 'Login - Time of BD!';
 	include './partials/header.php';
 ?>
 
@@ -59,42 +59,16 @@
     ?>
 
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="register-form" method="POST">
-		<h1>Register</h1>
-		<div>
-			<label for="first_name">First Name:</label>
-			<input type="text" name="first_name" id="first_name" required>
-		</div>
-		
-		<div>
-			<label for="last_name">Last Name:</label>
-			<input type="text" name="last_name" id="last_name" required>
-		</div>
+		<h1>Login</h1>
+		<label for="username">username:</label>
+		<input type="text" name="username" id="username" required><br><br>
 
-		<div>
-			<label for="email">Email:</label>
-			<input type="email" name="email" id="email" required>
-		</div>
-
-		
-		<label for="display_email"><i>Display Email?</i></label>
-		<input type="checkbox" name="display_email" id="display_email"><br><br>
-		
-
-		
-		<div>
-			<label for="username">username:</label>
-			<input type="text" name="username" id="username" required>
-		</div>
-
-		<div>
-			<label for="password">password:</label>
-			<input type="password" name="password" id="password" required>
-		</div>
-
-		<a href="./login.php" id="register-link">Already have an account?</a>
+		<label for="password">password:</label>
+		<input type="password" name="password" id="password" required><br><br>
+        <a href="./register.php" id="register-link">Need to register?</a>
         <br>
 		<br>
-		<input type="submit" value="Register">
+		<input type="submit" value="Log In">
 	</form>
 </body>
 </html>
