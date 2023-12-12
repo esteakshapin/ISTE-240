@@ -376,3 +376,7 @@ nav #user-profile{
 .comment-rate-item.thumbs-up.active{
     background-color: lightyellow;
 }
+
+.comment-rate-item.thumbs-up.active{
+    background-color: lightcoral;
+}
