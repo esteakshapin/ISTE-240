@@ -58,6 +58,7 @@
             // looping thru the table and displaying each entry
             if ($res) {
                 while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+                    $id = $row['id'];
                     $from = $row['from'];
                     $date = $row['date'];
                     $message = $row['message'];

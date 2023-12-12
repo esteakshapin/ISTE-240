@@ -7,7 +7,10 @@
             <?php echo $message ?>
         </p>
         <div class="comment-rate-section">
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="PUT">
+                <input type="hidden" name="id" value="<?php echo $id?>">
+                <input type="hidden" name="action" value="thumbs_up">
+                <input type="hidden" name="from" value="<?php echo $_SESSION['id']?>">
                 <button type="submit" class="comment-rate-item thumbs-up">
                     <span>
                         &#128077;
@@ -26,22 +29,27 @@
 
             </form>
 
-            <div class="comment-rate-item thumbs-down">
-                <span>
-                    &#128078; 
-                </span>
-                <span>
-                <?php 
-                    if ($thumbs_down == null) {
-                    echo "0";
-                    }else{
-                    echo strlen($thumbs_down);
-                    }
-                ?>
-                    
-                    Votes
-                </span>
-            </div>
+            
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="PUT">
+                <input type="hidden" name="id" value="<?php echo $id?>">
+                <input type="hidden" name="action" value="thumbs_down">
+                <input type="hidden" name="from" value="<?php echo $_SESSION['id']?>">
+                <button type="submit" class="comment-rate-item thumbs-down">
+                    <span>
+                        &#128078; 
+                    </span>
+                    <span>
+                        <?php 
+                            if ($thumbs_down == null) {
+                            echo "0";
+                            }else{
+                            echo strlen($thumbs_down);
+                            }
+                        ?>
+                        Votes
+                    </span>
+                </button>
+            </form>
         </div>
     </div>
     
