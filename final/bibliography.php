@@ -34,7 +34,7 @@
             </ul>
 
             <h2>Cities</h2>
-            <h3>Dhaka Page</h2>
+            <h3>Dhaka Page</h3>
             <ul>
                 <li><b>Dhaka Map:</b> hhttps://thumbs.dreamstime.com/z/dhaka-vector-map-detailed-city-administrative-area-cityscape-urban-panorama-royalty-free-illustration-outline-highways-237064275.jpg
                 </li>
@@ -63,19 +63,19 @@
             </ul>
 
             <h2>Food</h2>
-            <h3>Appetizer Page</h2>
+            <h3>Appetizer Page</h3>
             <ul>
                 <li><b>Samosa Photo:</b> https://www.marionskitchen.com/wp-content/uploads/2023/04/Samosa-9.jpg
                 </li>
             </ul>
 
-            <h3>Entree Page</h2>
+            <h3>Entree Page</h3>
             <ul>
                 <li><b>Chicken Biryani Photo:</b> https://images.food52.com/7f0yncraWeYUJG_lLbH2ie1xd6g=/2016x1344/d815e816-4664-472e-990b-d880be41499f--chicken-biryani-recipe.jpg
                 </li>
             </ul>
 
-            <h3>Desert Page</h2>
+            <h3>Desert Page</h3>
             <ul>
                 <li><b>Rasgulla Photo:</b> https://static.toiimg.com/photo/52743612.cms
                 </li>
@@ -84,7 +84,7 @@
             </ul>
 
             <h2>Vacation</h2>
-            <h3>Cox Bazar Page</h2>
+            <h3>Cox Bazar Page</h3>
             <ul>
                 <li><b>Cox Bazar Photo:</b> https://cdn.bangladeshscenictours.com/wp-content/uploads/2019/11/Exploring-Coxs-Bazar-990x490.jpg
                 </li>
@@ -92,13 +92,13 @@
                 </li>
             </ul>
 
-            <h3>Rangamati Page</h2>
+            <h3>Rangamati Page</h3>
             <ul>
                 <li><b>Hotels + Restaurants:</b> Google, Expedia
                 </li>
             </ul>
 
-            <h3>Rangamati Page</h2>
+            <h3>Rangamati Page</h3>
             <ul>
                 <li><b>St. Martin's Island Photo:</b> https://st.depositphotos.com/56785000/53594/i/450/depositphotos_535942156-stock-photo-marina-restaurant-island-maldives.jpg
                 </li>
