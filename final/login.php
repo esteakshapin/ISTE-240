@@ -45,7 +45,7 @@ echo "initial";
                 // Fetch the results
                 if ($stmt->fetch()) {
                     // verify the password
-                    if (password_verify($_POST["password"], $hashedPassword)) {
+                    if (password_verify($_POST["password"], $hashed_password)) {
                         echo "User found: " . $first_name . " " . $last_name;
                     } else {
                         echo "Invalid username or password";
