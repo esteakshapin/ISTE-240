@@ -109,16 +109,16 @@
         </div>
 
         <h2>Leave a comment!</h2>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="comment-form" method="POST">
+        <?php 
+        if (array_key_exists("id", $_SESSION) && array_key_exists("first_name", $_SESSION) && array_key_exists("last_name", $_SESSION)) {
+            include "./partials/comment_form.php";
+        }else{
+            echo '<a href="./login.php" id="login">You need to login to leave a comment!</a>';
+        }
+        
+        ?>
 
-            <label for="">Name: <h4>John Doe</h4></label>
-            <br>
-            <label for="comment">Leave your comment:</label><br>
-            <textarea name="comment" id="comment" cols="50" rows="10" required></textarea>
-
-            <br>
-            <input type="submit" value="submit">
-        </form>
+        
     </div>
 </body>
 </html>
