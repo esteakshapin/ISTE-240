@@ -372,3 +372,7 @@ nav #user-profile{
     border-radius: 10px;
     padding: .5rem;
 }
+
+.comment-rate-section .comment-rate-item.thumbs-up.active{
+    background-color: lightyellow;
+}
