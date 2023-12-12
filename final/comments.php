@@ -40,7 +40,7 @@
             }
 
             //trying to thumbs up
-            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_up" && $_POST["id"] !== ""){
+            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_up" && $_POST["from"] !== ""){
                 // first get comment that the user is trying to thumbs up
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
@@ -74,7 +74,7 @@
             }
 
             //trying to thumbs down
-            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_down" && $_POST["id"] !== ""){
+            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_down" && $_POST["from"] !== ""){
                 // first get comment that the user is trying to thumbs up
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
