@@ -58,7 +58,7 @@
                         $thumbs_up = $_POST['from'] + ",";
                     }else if(strpos($thumbs_up, $_POST['from']) !== false){
                         //if user is already on the list, in which case we must remove them
-                        str_replace($_POST['from'] + ",", "", $thumbs_up);
+                        str_replace((string)$_POST['from'] + ",", "", $thumbs_up);
                     }else{
                         $thumbs_up += $_POST['from'] + ",";
                     }
