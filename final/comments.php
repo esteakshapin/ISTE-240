@@ -67,7 +67,7 @@
 
                     // //adding name
                     // $commentElement += '<h4>' + $row['from'] + '</h4>';
-                echo $row["name"];
+                echo $row["from"];
                 include './partials/comment.php';
                 $counter += 1;
 
