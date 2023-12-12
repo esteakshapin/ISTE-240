@@ -56,9 +56,19 @@
                     <h4>PHP Transformation</h4>
                     Refactored all pages to be php and use partials. Header, navbar, carousel, and footer (added in this version) has been implemented as php partials and are being incorporated in all pages using include. This has significantly reduced repetitiveness and follow the DRY
                 </li>
+                <li>
+                    <h4>W3C Validation (mistake from midterm)</h4>
+                    Refactored all pages to meet the markup validity as set forth by the W3C. This is an improvement/fix from teh first iteration which contained validation errors leading to point deduction. 
+                </li>
 
                 <li>
-                    <h4></h4>
+                    <h4>Original JavaScript component</h4>
+                    The javascript component is the filtering blog section on the index page. This element was added in for the revision/update and was not present in the previous version. First, the filter tabs make a call to the toggle function which checks if the filter tab is active or not and makes its state the opposite (i.e active -> non-active). This done by simply checking to see if the "active" class is present on the filter tab element. Next, the functions gets a list of all the filter tab elements and loops through them. If the filter tab is active, the functions takes a list of all the "cards" which has the same class name as the filter option and makes them visible. Any card elements that have class name of one of the filter tabs that are not active are given the "hide" class making them disappear. Lastly, the function checks to see if there are no filter tabs which are selected ("active") and makes all "cards" visible in that case. This is the default case.
+                    
+                </li>
+                <li>
+                    <h4>DHTML Element</h4>
+                    The first javascript component is an automatic image carousel that cycles through a given list of images. The website is about my trip to Bangladesh and this carousel allows me to include relevant and fun visual elements to portray my vacation. I implemented this feature by using a div with an img and a title that is positioned within the image. The title is positioned in the center of the carousel using absolute position. Using JavaScript, the src of the IMG tag is changed every 2 section to the next index of the list of images, allowing for a cycling carousel.
                 </li>
             </ul>
 
