@@ -273,3 +273,68 @@ nav #about-me{
     width: 100%;
     background-color: white;
 }
+
+.comment-box{
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem
+}
+
+.comment-box-color-primary{
+    background-color: #F5EFEB;
+}
+
+.comment-box img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.comment-text-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-text-section span{
+    color: gray;
+}
+
+.comment-text-section p{
+    font-family: var(--primary-font);
+    font-size: medium;
+    font-weight: 400;
+}
+
+.comment-rate-section{
+    display: flex;
+    gap: .5rem;
+}
+
+.comment-rate-item{
+    border: 1px solid gray;
+    border-radius: 25px;
+    padding: .3rem;
+    font-size: small;
+    cursor: pointer;
+}
+
+.comment-rate-item.thumbs-up:hover{
+    background-color: rgba(255, 228, 196, 0.718);
+}
+
+.comment-rate-item.thumbs-down:hover{
+    background-color: rgba(248, 215, 199, 0.718);
+}
+
+.comment-form input, .comment-form textarea{
+    margin-bottom: 1rem;
+}
+
+nav #user-profile{
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 50%;
+}

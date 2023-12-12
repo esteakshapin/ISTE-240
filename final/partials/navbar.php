@@ -68,7 +68,31 @@
                 
             </ul>
         </li>
+
+        <li class="nav-items <?php if ($active == "Forum") {echo 'active';}?>" >
+            <a href="./comments.php">
+                <div class="spacing"></div>
+                Forum
+                <div class="spacing"></div>
+            </a>
+        </li>
+
+        <li class="nav-items <?php if ($active == "About") {echo 'active';}?>" >
+            <a href="./comments.php">
+                <div class="spacing"></div>
+                About
+                <div class="spacing"></div>
+            </a>
+        </li>
+
+        <li class="nav-items <?php if ($active == "Work-Cited") {echo 'active';}?>" >
+            <a href="./bibliography.php">
+                <div class="spacing"></div>
+                Work Cited
+                <div class="spacing"></div>
+            </a>
+        </li>
     </ul>
 
-    <a href="./bibliography.php"><span id="about-me">Work Cited</span></a>
+    <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile">
 </nav>
