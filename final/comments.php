@@ -56,7 +56,7 @@
                     // if thumbs up list is null, add user as the first user
                     if($thumbs_up == null){
                         $thumbs_up = $_POST['from'] + ",";
-                    }else if(str_contains($thumbs_up, $from)){
+                    }else if(strpos($thumbs_up, $from) !== false){
                         //if user is already on the list, in which case we must remove them
                         str_replace($from + ",", "", $thumbs_up);
                     }else{
