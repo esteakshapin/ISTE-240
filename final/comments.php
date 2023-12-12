@@ -30,15 +30,13 @@
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 
-                $message = $_GET['comment'];
+                $message = $_POST['comment'];
                 $from = $_SESSION['id'];
 
-                echo $from . " - " . $message;
-
-                // $stmt = $conn->prepare('INSERT INTO `240Comments` (`from`, `message`) VALUES (?, ?)');
-                // $stmt->bind_param('is', $from, $message);
-                // $stmt->execute();
-                // $stmt->close();
+                $stmt = $conn->prepare('INSERT INTO `240Comments` (`from`, `message`) VALUES (?, ?)');
+                $stmt->bind_param('is', $from, $message);
+                $stmt->execute();
+                $stmt->close();
             }
 		}
 	}
