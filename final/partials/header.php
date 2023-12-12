@@ -1,5 +1,5 @@
 <!-- include the database connection -->
-<?php include "../../dbCon.php"?>
+<?php include "../dbCon.php"?>
 
 <head>
     <meta charset="UTF-8">
