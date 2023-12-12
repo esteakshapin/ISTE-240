@@ -32,25 +32,26 @@ echo "initial";
             echo "preparing statement";
 				mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
-				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name` FROM `240Users` WHERE `username` = ? AND `password` = ? LIMIT 1");
-
-                $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
-            echo "<br> password " . $password . "<br>";
+				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name`, `password` FROM `240Users` WHERE `username` = ? LIMIT 1");
 	
 				//bind
-				$stmt->bind_param("ss", $_POST["username"], $password);
+				$stmt->bind_param("s", $_POST["username"]);
 	
 				//execute
 				$stmt->execute();
-                $stmt->bind_result($id, $first_name, $last_name);
+                $stmt->bind_result($id, $first_name, $last_name, $hashed_password);
 
 
                 // Fetch the results
                 if ($stmt->fetch()) {
-                    echo "User found: " . $first_name . " " . $last_name;
+                    // verify the password
+                    if (password_verify($_POST["password"], $hashedPassword)) {
+                        echo "User found: " . $first_name . " " . $last_name;
+                    } else {
+                        echo "Invalid username or password";
+                    }
                 } else {
-                    echo "Invalid username or password";
+                    echo "No user found with that username";
                 }
 
 				$stmt->close();
