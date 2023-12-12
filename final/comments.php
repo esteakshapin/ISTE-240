@@ -29,7 +29,7 @@
             if(!empty($_POST['comment'])){
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-                
+
                 $message = $_GET['comment'];
                 $from = $_SESSION['id'];
 
@@ -109,7 +109,7 @@
         </div>
 
         <h2>Leave a comment!</h2>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="comment-form">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="comment-form" method="POST">
 
             <label for="">Name: <h4>John Doe</h4></label>
             <br>
