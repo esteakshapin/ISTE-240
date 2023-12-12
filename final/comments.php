@@ -31,10 +31,10 @@
 
 
                 $message = $_POST['comment'];
-                $from = $_SESSION['id'];
+                $from = $_POST['from'];
 
                 $stmt = $conn->prepare('INSERT INTO `240Comments` (`from`, `message`) VALUES (?, ?)');
-                $stmt->bind_param('is', $from, $message);
+                $stmt->bind_param('ss', $from, $message);
                 $stmt->execute();
                 $stmt->close();
             }
@@ -46,67 +46,39 @@
 
     <div class="content">
         <h2>See what other's are saying!</h2>
+        <?php 
+            // querying for all the comments in the database
+            $res = $conn->query('SELECT `from`, `message`, `date`, `thumbs_up`, `thumbs_down`, `id` FROM `240Comments`');
 
-        <div class="comment-box comment-box-color-primary">
-            <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="">
-            <div class="comment-text-section">
-                <h4>NAME</h4>
-                <span>10.10.10</span>
-                <p>
-                    COMMENT TEXT
-                </p>
-                <div class="comment-rate-section">
-                    <div class="comment-rate-item thumbs-up">
-                        <span>
-                            &#128077;
-                        </span>
-                        <span>
-                            10 Votes
-                        </span>
-                    </div>
+            // use the counter to alternate background color
+            $counter = 0;
 
-                    <div class="comment-rate-item thumbs-down">
-                        <span>
-                            &#128078; 
-                        </span>
-                        <span>
-                            10 Votes
-                        </span>
-                    </div>
-                </div>
-            </div>
             
-        </div>
-        <div class="comment-box ">
-        <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="">
-            <div class="comment-text-section">
-                <h4>NAME</h4>
-                <span>10.10.10</span>
-                <span>test@gmail.com</span>
-                <p>
-                    COMMENT TEXT
-                </p>
-                <div class="comment-rate-section">
-                    <div class="comment-rate-item thumbs-up">
-                        <span>
-                            &#128077;
-                        </span>
-                        <span>
-                            0 Votes
-                        </span>
-                    </div>
 
-                    <div class="comment-rate-item thumbs-down">
-                        <span>
-                            &#128078; 
-                        </span>
-                        <span>
-                            0 Votes
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+            // looping thru the table and displaying each entry
+            if ($res) {
+                while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+                    // $commentElement = '<div class="comment-box';
+                    // if($counter % 2 == 0){
+                    // $commentElement += ' comment-box-color-primary';
+                    // }
+
+                    // $commentElement += '</div> <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt=""><div class="comment-text-section">';
+
+                    // //adding name
+                    // $commentElement += '<h4>' + $row['from'] + '</h4>';
+        
+                include './partials/comment.php';
+                $counter += 1;
+
+
+
+                }
+            } else {
+                echo "Error in query execution: " . mysqli_error($conn);
+            }
+        
+        ?>
 
         <h2>Leave a comment!</h2>
         <?php 
