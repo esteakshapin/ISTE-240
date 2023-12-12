@@ -110,7 +110,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
     <!-- if user is logged in, display user icon -->
     <?php 
     if (array_key_exists("id", $_SESSION) && array_key_exists("first_name", $_SESSION) && array_key_exists("last_name", $_SESSION)) {
-        echo '<a href="./logout.php"><img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile"> logout </a>';
+        echo '<div style="display: flex; align-items: center; gap: .5rem"><img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile"><a id="login" href="./logout.php">Log Out</a></div>';
     }else{
         echo '<a href="./login.php" id="login">Log In</a>';
     }
