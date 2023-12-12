@@ -12,7 +12,7 @@
 
 	if($conn){
 		if($_POST != null){
-			$formElements = array("username", "password", "first_name", "last_name", "email");
+			$formElements = array("username", "password");
 	
 			$elementsEmpty = false;
 	
@@ -25,25 +25,24 @@
 	
 			// check all the elements are not empty and the passwords match
 			if(!$elementsEmpty){
-	
-				$display_email = 0;
-				// format display_email
-				if(!empty($_POST['display_email']) && $_POST['display_email'] == 'on'){
-					$display_email = 1;
-				}
 				
 				mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
-				$stmt = $conn->prepare("INSERT INTO `240Users` (`username`, `password`, `email`, `display_email`, `first_name`, `last_name`) VALUES (?,?,?,?,?, ?)");
+				$stmt = $conn->prepare("SELECT `id`, `first_name`, `last_name` FROM `240Users` WHERE `username` = '?' AND `password` = '?' LIMIT 50");
 	
 				//bind
-				$stmt->bind_param("sssiss", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["email"], $display_email, $_POST["first_name"], $_POST["last_name"]);
+				$stmt->bind_param("ss", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT));
 	
 				//execute
 				$stmt->execute();
+                $stmt->bind_result($res);
+                $stmt->fetch();
+
+                echo $res;
+
 				$stmt->close();
 	
-				header('Location: index.php');
+				// header('Location: index.php');
 			}
 		}
 	}

@@ -42,8 +42,9 @@
 				//execute
 				$stmt->execute();
 				$stmt->close();
-	
-				header('Location: index.php');
+				
+				// successfully registered, redirect users to try and log in now
+				header('Location: login.php');
 			}
 		}
 	}
