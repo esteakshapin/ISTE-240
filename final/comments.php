@@ -33,6 +33,8 @@
                 $message = $_GET['comment'];
                 $from = $_SESSION['id'];
 
+                echo $from . " - " . $message;
+
                 $stmt = $conn->prepare('INSERT INTO `240Comments` (`from`, `message`) VALUES (?, ?)');
                 $stmt->bind_param('is', $from, $message);
                 $stmt->execute();
