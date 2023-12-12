@@ -35,10 +35,10 @@
 
                 echo $from . " - " . $message;
 
-                $stmt = $conn->prepare('INSERT INTO `240Comments` (`from`, `message`) VALUES (?, ?)');
-                $stmt->bind_param('is', $from, $message);
-                $stmt->execute();
-                $stmt->close();
+                // $stmt = $conn->prepare('INSERT INTO `240Comments` (`from`, `message`) VALUES (?, ?)');
+                // $stmt->bind_param('is', $from, $message);
+                // $stmt->execute();
+                // $stmt->close();
             }
 		}
 	}
