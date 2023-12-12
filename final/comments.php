@@ -114,7 +114,7 @@
             <textarea name="comment" id="comment" cols="50" rows="10" required></textarea>
 
             <br>
-            <input type="button" value="submit">
+            <input type="submit" value="submit">
         </form>
     </div>
 </body>
