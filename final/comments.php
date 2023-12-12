@@ -67,11 +67,11 @@
 
                     // //adding name
                     // $commentElement += '<h4>' + $row['from'] + '</h4>';
-                $from = $row['from'];
-                $date = $row['date'];
-                $message = $row['message'];
-                include './partials/comment.php';
-                $counter += 1;
+                    $from = $row['from'];
+                    $date = $row['date'];
+                    $message = $row['message'];
+                    include './partials/comment.php';
+                    $counter += 1;
 
 
 
