@@ -377,6 +377,6 @@ nav #user-profile{
     background-color: lightyellow;
 }
 
-.comment-rate-item.thumbs-up.active{
+.comment-rate-item.thumbs-down.active{
     background-color: lightcoral;
 }
