@@ -7,7 +7,7 @@
             <?php echo $message ?>
         </p>
         <div class="comment-rate-section">
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="PUT">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <input type="hidden" name="action" value="thumbs_up">
                 <input type="hidden" name="from" value="<?php echo $_SESSION['id']?>">
@@ -30,7 +30,7 @@
             </form>
 
             
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="PUT">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <input type="hidden" name="action" value="thumbs_down">
                 <input type="hidden" name="from" value="<?php echo $_SESSION['id']?>">

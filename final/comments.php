@@ -38,6 +38,40 @@
                 $stmt->execute();
                 $stmt->close();
             }
+
+            //trying to thumbs up
+            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_up"){
+                // first get comment that the user is trying to thumbs up
+                mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+	
+				$stmt = $conn->prepare("SELECT `thumbs_up` FROM `240Comments` WHERE `id` = ? LIMIT 1");
+                //bind
+				$stmt->bind_param("i", $_POST["id"]);
+
+                //execute
+				$stmt->execute();
+                $stmt->bind_result($thumbs_up);
+                // Fetch the results
+                if ($stmt->fetch()) {
+                    // if thumbs up list is null, add user as the first user
+                    if($thumbs_up == null){
+                        $thumbs_up = "" + $_POST['from'];
+                    }else if(str_contains($thumbs_up, $from)){
+                        //if user is already on the list, in which case we must remove them
+                        str_replace($from + ",", "", $thumbs_up);
+                    }else{
+                        $thumbs_up += $from + ",";
+                    }
+                }
+
+                $stmt->close();
+
+                //update comment
+                $stmt = $conn->prepare('UPDATE `240Comments` SET `thumbs_up` = ? WHERE `id` = ?');
+                $stmt->bind_param('si', $thumbs_up, $_POST["id"]);
+                $stmt->execute();
+                $stmt->close();
+            }
 		}
 	}
 
