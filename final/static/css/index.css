@@ -373,6 +373,6 @@ nav #user-profile{
     padding: .5rem;
 }
 
-.comment-rate-section .comment-rate-item.thumbs-up.active{
+.comment-rate-item.thumbs-up.active{
     background-color: lightyellow;
 }
