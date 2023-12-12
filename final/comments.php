@@ -40,7 +40,7 @@
             }
 
             //trying to thumbs up
-            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_up"){
+            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_up" && $_POST["id"] !== ""){
                 // first get comment that the user is trying to thumbs up
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
@@ -74,7 +74,7 @@
             }
 
             //trying to thumbs down
-            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_down" && !empty($_POST["id"])){
+            if(!empty($_POST['action']) && $_POST['action'] == "thumbs_down" && $_POST["id"] !== ""){
                 // first get comment that the user is trying to thumbs up
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
@@ -146,7 +146,7 @@
         if (array_key_exists("id", $_SESSION) && array_key_exists("first_name", $_SESSION) && array_key_exists("last_name", $_SESSION)) {
             include "./partials/comment_form.php";
         }else{
-            echo '<a href="./login.php" id="login">You need to login to leave a comment!</a>';
+            echo '<a href="./login.php" id="login">You need to login to rate or leave a comment!</a>';
         }
         
         ?>
