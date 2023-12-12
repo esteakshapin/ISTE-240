@@ -55,12 +55,12 @@
                 if ($stmt->fetch()) {
                     // if thumbs up list is null, add user as the first user
                     if($thumbs_up == null){
-                        $thumbs_up = $_POST['from'] + ",";
+                        $thumbs_up = (string)$_POST['from'] + ",";
                     }else if(strpos($thumbs_up, $_POST['from']) !== false){
                         //if user is already on the list, in which case we must remove them
                         str_replace((string)$_POST['from'] + ",", "", $thumbs_up);
                     }else{
-                        $thumbs_up += $_POST['from'] + ",";
+                        $thumbs_up += (string)$_POST['from'] + ",";
                     }
                 }
 
