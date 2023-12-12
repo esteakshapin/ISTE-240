@@ -58,15 +58,6 @@
             // looping thru the table and displaying each entry
             if ($res) {
                 while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
-                    // $commentElement = '<div class="comment-box';
-                    // if($counter % 2 == 0){
-                    // $commentElement += ' comment-box-color-primary';
-                    // }
-
-                    // $commentElement += '</div> <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt=""><div class="comment-text-section">';
-
-                    // //adding name
-                    // $commentElement += '<h4>' + $row['from'] + '</h4>';
                     $from = $row['from'];
                     $date = $row['date'];
                     $message = $row['message'];
@@ -74,9 +65,6 @@
                     $thumbs_down = $row["thumbs_down"];
                     include './partials/comment.php';
                     $counter += 1;
-
-
-
                 }
             } else {
                 echo "Error in query execution: " . mysqli_error($conn);

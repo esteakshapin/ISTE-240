@@ -7,21 +7,24 @@
             <?php echo $message ?>
         </p>
         <div class="comment-rate-section">
-            <div class="comment-rate-item thumbs-up">
-                <span>
-                    &#128077;
-                </span>
-                <span>
-                    <?php 
-                        if ($thumbs_up == null) {
-                        echo "0";
-                        }else{
-                        echo strlen($thumbs_up);
-                        }
-                    ?>
-                    Votes
-                </span>
-            </div>
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <button type="submit" class="comment-rate-item thumbs-up">
+                    <span>
+                        &#128077;
+                    </span>
+                    <span>
+                        <?php 
+                            if ($thumbs_up == null) {
+                            echo "0";
+                            }else{
+                            echo strlen($thumbs_up);
+                            }
+                        ?>
+                        Votes
+                    </span>
+                </button>
+
+            </form>
 
             <div class="comment-rate-item thumbs-down">
                 <span>
