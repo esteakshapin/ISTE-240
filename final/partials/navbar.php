@@ -106,16 +106,14 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
         </li>
     </ul>
 
-    <a href="./register.php">
-        <!-- if user is logged in, display user icon -->
-        <?php 
-        if (array_key_exists("id", $_SESSION) && array_key_exists("first_name", $_SESSION) && array_key_exists("last_name", $_SESSION)) {
-            echo '<img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile">';
-        }else{
-            echo '<a href="./login.php" id="login">Log In</a>';
-        }
-        
-        ?>
-        
-    </a>
+    
+    <!-- if user is logged in, display user icon -->
+    <?php 
+    if (array_key_exists("id", $_SESSION) && array_key_exists("first_name", $_SESSION) && array_key_exists("last_name", $_SESSION)) {
+        echo '<a href="./logout.php"><img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile"> logout </a>';
+    }else{
+        echo '<a href="./login.php" id="login">Log In</a>';
+    }
+    
+    ?>
 </nav>
