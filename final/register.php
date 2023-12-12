@@ -12,7 +12,7 @@
 
 	if($conn){
 		if($_POST != null){
-			$formElements = array("username", "password", "first_name", "last_name", 	"email");
+			$formElements = array("username", "password", "first_name", "last_name", "email");
 	
 			$elementsEmpty = false;
 	
@@ -31,12 +31,13 @@
 				if(!empty($_POST['display_email']) && $_POST['display_email'] == 'on'){
 					$display_email = 1;
 				}
-	
+				
+				mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
 				$stmt = $conn->prepare("INSERT INTO `240Users` (`username`, `password`, `email`, `display_email`, `first_name`, `last_name`) VALUES (?,?,?,?,?, ?)");
 	
 				//bind
-				$stmt->bind_param($_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["email"], $display_email, $_POST["first_name"], $_POST["last_name"]);
+				$stmt->bind_param("sssiss", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["email"], $display_email, $_POST["first_name"], $_POST["last_name"]);
 	
 				//execute
 				$stmt->execute();
