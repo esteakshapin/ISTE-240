@@ -114,32 +114,35 @@
 
     <div class="content">
         <h2>See what other's are saying!</h2>
-        <?php 
-            // querying for all the comments in the database
-            $res = $conn->query('SELECT `from`, `message`, `date`, `thumbs_up`, `thumbs_down`, `id` FROM `240Comments`');
+        <div class="comment-section-container">
+            <?php 
+                // querying for all the comments in the database
+                $res = $conn->query('SELECT `from`, `message`, `date`, `thumbs_up`, `thumbs_down`, `id` FROM `240Comments`');
 
-            // use the counter to alternate background color
-            $counter = 0;
+                // use the counter to alternate background color
+                $counter = 0;
 
-            
+                
 
-            // looping thru the table and displaying each entry
-            if ($res) {
-                while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
-                    $id = $row['id'];
-                    $from = $row['from'];
-                    $date = $row['date'];
-                    $message = $row['message'];
-                    $thumbs_up = $row["thumbs_up"];
-                    $thumbs_down = $row["thumbs_down"];
-                    include './partials/comment.php';
-                    $counter += 1;
+                // looping thru the table and displaying each entry
+                if ($res) {
+                    while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+                        $id = $row['id'];
+                        $from = $row['from'];
+                        $date = $row['date'];
+                        $message = $row['message'];
+                        $thumbs_up = $row["thumbs_up"];
+                        $thumbs_down = $row["thumbs_down"];
+                        include './partials/comment.php';
+                        $counter += 1;
+                    }
+                } else {
+                    echo "Error in query execution: " . mysqli_error($conn);
                 }
-            } else {
-                echo "Error in query execution: " . mysqli_error($conn);
-            }
+            
+            ?>
+        </div>
         
-        ?>
 
         <h2>Leave a comment!</h2>
         <?php 
