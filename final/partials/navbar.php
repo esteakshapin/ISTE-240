@@ -2,8 +2,13 @@
 
 <?php
 
-session_name("eks3146_240_final");
-session_start();
+
+// this session check was borrowed from https://stackoverflow.com/questions/3538513/detect-if-php-session-exists
+if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
+    // session isn't started
+    session_name("eks3146_240_final");
+    session_start();
+}
 
 ?>
 
@@ -104,7 +109,7 @@ session_start();
     <a href="./register.php">
         <!-- if user is logged in, display user icon -->
         <?php 
-        if ($_SESSION["user_id"] && $_SESSION["first_name"] && $_SESSION["last_name"]) {
+        if (array_key_exists("user_id", $_SESSION) && array_key_exists("first_name", $_SESSION) && array_key_exists("last_name", $_SESSION)) {
             echo '<img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="" id="user-profile">';
         }else{
             echo '<a href="./login.php" id="login">Log In</a>';
