@@ -11,7 +11,7 @@
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <input type="hidden" name="action" value="thumbs_up">
                 <input type="hidden" name="from" value="<?php echo $_SESSION['id']?>">
-                <button type="submit" class="comment-rate-item thumbs-up <?php if (strpos($thumbs_up, $_SESSION['id']) !== false) {echo "active";}?>">
+                <button type="submit" class="comment-rate-item thumbs-up <?php if (strpos($thumbs_up, (string)$_SESSION['id']) !== false) {echo "active";}?>">
                     <span>
                         &#128077;
                     </span>
