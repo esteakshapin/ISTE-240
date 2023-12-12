@@ -22,6 +22,25 @@
     
     ?>
 
+    <?php 
+    if($conn){
+		if($_POST != null){
+            // trying to add a new comment
+            if(!empty($_POST['comment'])){
+                $message = $_GET['comment'];
+                $from = $_SESSION['id'];
+
+                $stmt = $conn->prepare('INSERT INTO `240Comments` (`from`, `message`) VALUES (?, ?)');
+                $stmt->bind_param('is', $from, $message);
+                $stmt->execute();
+                $stmt->close();
+            }
+		}
+	}
+
+
+    ?>
+
     <div class="content">
         <h2>See what other's are saying!</h2>
 
@@ -87,24 +106,12 @@
         </div>
 
         <h2>Leave a comment!</h2>
-        <form action="" class="comment-form">
-            <label for="first-name">First Name:</label><br>
-            <input type="text" name="first-name" id="first-name"><br>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="comment-form">
 
-            <label for="last-name">Last Name:</label><br>
-            <input type="text" name="last-name" id="last-name"><br>
-
-            <label for="email">Email:</label><br>
-            <input type="email" name="email" id="email"><br>
-
-            <label for="display-email">Display Email?</label>
-            <input type="checkbox" name="display-email" id="display-email"><br>
-
-            <label for="img">Upload Avatar:</label>
-            <input type="file" id="img" name="img" accept="image/*"><br>
-
+            <label for="">Name: <h4>John Doe</h4></label>
+            <br>
             <label for="comment">Leave your comment:</label><br>
-            <textarea name="comment" id="comment" cols="50" rows="10"></textarea>
+            <textarea name="comment" id="comment" cols="50" rows="10" required></textarea>
 
             <br>
             <input type="button" value="submit">
