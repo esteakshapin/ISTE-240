@@ -190,6 +190,9 @@
         <!-- footer section -->
         <?php include "./partials/footer.php" ?>
 
+        <!-- script for filtering -->
+        <script src="./static/js/index.js"></script>
+
         <script>
             // list of image URL that the carousel uses to cycle through
             const imageUrls = [
