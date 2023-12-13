@@ -58,18 +58,20 @@
 
             </p>
 
-            <!-- Blogs section with links to the individual pages -->
-            <h2>Blogs</h2>
-            <div class="assignmentCardContainer">
+            <div>
+                <!-- Blogs section with links to the individual pages -->
+                <h2>Blogs</h2>
 
                 <!-- This container is a flex div that hold all the filter options. It is justified at the end -->
                 <div class="filterOptionsContainer">
-                    <h4>Filter</h4>
-                    <span class="filterOptions exercises" onclick="toggle(this)">Cities</span>
-                    <span class="filterOptions individualProjects" onclick="toggle(this)">Food</span>
-                    <span class="filterOptions groupProjects" onclick="toggle(this)">Vacation</span>
+                        <h4>Filter</h4>
+                        <span class="filterOptions exercises" onclick="toggle(this)">Cities</span>
+                        <span class="filterOptions individualProjects" onclick="toggle(this)">Food</span>
+                        <span class="filterOptions groupProjects" onclick="toggle(this)">Vacation</span>
                 </div>
-
+            </div>
+            
+            <div class="assignmentCardContainer">
                 <div class="card">
                     <img
                         src="https://cdn.britannica.com/97/189797-050-1FC0041B/Night-view-Dhaka-Bangladesh.jpg"
