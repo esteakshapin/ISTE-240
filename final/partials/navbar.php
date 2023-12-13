@@ -148,8 +148,10 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
     
     
         <li class="mobile-sub-nav-menu-items indented"><a href="./Feni.php">Feni</a></li>
+        <li>
+            <h4 class="<?php if ($active == "Food") {echo 'active';}?>">Food</h4>
+        </li>
         
-        <h4 class="<?php if ($active == "Food") {echo 'active';}?>">Food</h4>
         <li class="mobile-sub-nav-menu-items indented"><a href="./appetizer.php">Appetizer</a></li>
             
             
@@ -158,7 +160,10 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
     
         <li class="mobile-sub-nav-menu-items indented"><a href="./desert.php">Desert</a></li>
 
-        <h4 class="<?php if ($active == "Vacation") {echo 'active';}?>">Vacation</h4>
+        <li>
+            <h4 class="<?php if ($active == "Vacation") {echo 'active';}?>">Vacation</h4>
+        </li>
+        
         <li class="mobile-sub-nav-menu-items indented"><a href="./cox-bazar.php">Cox Bazar</a></li>
             
             
