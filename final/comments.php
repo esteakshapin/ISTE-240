@@ -149,7 +149,7 @@
         if (array_key_exists("id", $_SESSION) && array_key_exists("first_name", $_SESSION) && array_key_exists("last_name", $_SESSION)) {
             include "./partials/comment_form.php";
         }else{
-            echo '<a href="./login.php" id="login">You need to login to rate or leave a comment!</a>';
+            echo '<a href="./login.php">You need to login to rate or leave a comment!</a>';
         }
         
         ?>
