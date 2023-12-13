@@ -89,7 +89,7 @@ nav .nav-center-items-container .sub-nav-menu .sub-nav-menu-items:hover{
     display: block;
 }
 
-nav #login{
+nav #login, #mobile-login{
     font-family: var(--primary-font);
     font-weight: bold;
 }
