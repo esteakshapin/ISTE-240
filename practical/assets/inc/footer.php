@@ -1,1 +1,1 @@
-<?php echo "&copy; " . date("Y") . " South Harmon Institute of Technology" ?>
+<footer><?php echo "&copy; " . date("Y") . " South Harmon Institute of Technology" ?></footer>
