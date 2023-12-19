@@ -42,7 +42,7 @@
     <!-- Application section -->
     <div class="application-section">
         <h2>Apply Now</h2>
-        <form name="applicationForm" action="practical/process.php" onsubmit="return validateApplicationForm()" method="post">
+        <form name="applicationForm" action="test.php" onsubmit="return validateApplicationForm()" method="post">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name">
             <br>
