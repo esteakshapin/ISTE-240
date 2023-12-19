@@ -53,6 +53,29 @@
         </form>
     </div>
 
+    <!-- student testimonial section -->
+    <div class="student-testimonial">
+        <?php
+        include "../dbCon.php";
+            // get all the comments in the database
+            if ($conn){
+                // querying for all the testimonials in the database
+                $res = $conn->query('SELECT `name`, `testimonial` FROM `testimonials`');
+                
+                // looping thru the table and displaying each entry in an <li>
+                if ($res) {
+                    while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+                    $name = $row['name'];
+                    $testimonial = $row["testimonial"];
+
+                    include "./assets/inc/testimonial.php";
+                    }
+                } else {
+                    echo "Error in query execution: " . mysqli_error($conn);
+                }
+            }
+        ?>
+    </div>
     
  </div>
 </body>
