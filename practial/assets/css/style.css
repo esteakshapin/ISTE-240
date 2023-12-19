@@ -1,0 +1,72 @@
+body{
+
+   background:#C7AF9A;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    background:#fff;
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:10px;
+}
+
+.wrapper .logo{
+    width: 100%;
+    max-width: 615px;
+}
+
+h1,h2,h3,h4{
+    color:rgb(50, 57, 90);
+}
+
+nav.main{
+    display:flex;
+    background-color: rgb(34, 37, 55);
+    padding:10px;
+    justify-content:space-around;
+}
+
+nav.main a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.featured-review{
+    position:relative;
+    width:300px;
+    height:220px;
+    margin-top:20px;
+}
+
+.featured-image{
+    position:absolute;
+}
+
+.featured-tagline{
+    position: absolute;
+    color: #fff;
+    background: #bd6642;
+    width: 150px;
+    bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    left: 10px;
+}
+
+@media screen and (max-width: 600px){
+    nav.main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* source-sans pro
+        montserrat
+        open sans
+    */
+}
